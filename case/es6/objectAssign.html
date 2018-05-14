@@ -1,0 +1,12 @@
+<script type="module">
+	{
+		var target = {a:1, b:2};
+		
+		var source1 = {b:20, c:3, m:4};
+		var source2 = {c:30, e:8, g:10};
+
+		Object.assign(target, source1, source2);
+		
+		document.write(`属性简写：${JSON.stringify(target)}<br><br>`);
+	}
+</script>

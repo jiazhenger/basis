@@ -1,0 +1,44 @@
+<pre style="line-height:24px;font-size:14px;font-family:Arial;">
+	// ======================================================= 暴露变量
+	// 写法一
+	export var m = 'Michael';
+	// 写法二
+	var m = 1;
+	export {m};
+	// 写法三
+	var n = 1;
+	export {n as m};
+	// 设置默认变量
+	var a = 1;
+	export default a;
+	// ======================================================= 暴露对象
+	export {firstName, lastName, year};
+	// ======================================================= 暴露函数
+	export function multiply(x, y) {
+		return x * y;
+	}
+	export {multiply};
+	// ======================================================= 暴露类
+	export class{}
+	// ======================================================= 暴露方法别名
+	export {
+		fn1 as streamFn1,
+		fn2 as streamFn2,
+		fn2 as streamLatestVersion
+	};
+	// ======================================================= 暴露默认方法
+	export default function () {
+		console.log('foo');
+	}
+	// 或
+	function foo() {
+  		console.log('foo');
+	}
+	export default foo;
+	// 或
+	export {add as default}
+</pre>
+
+<script type="module">
+	
+</script>

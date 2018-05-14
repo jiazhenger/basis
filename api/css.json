@@ -1,0 +1,1946 @@
+﻿{
+	"title" : "css 教案",
+	"data" : {
+		"link" : {
+			"title" : "样式表导入",
+			"tags" : {
+				"link" : {
+					"def" : "样式表使用的三种方式",
+					"ins" : [
+						"外联式：<br>&lt;link rel=stylesheet href='screen.css'&gt;",
+						"嵌入式：<br>&lt;style&gt;.class{color:red;background:blue;}&lt;/style&gt;",
+						"内联式：<br> &lt;div style='color:red;background:blue'&gt;&lt;/div&gt;"
+					],
+					"cas" : "background.html"
+				}
+			}
+		},
+		"font" : {
+			"title" : "字体 font",
+			"tags" : {
+				"font" : {
+					"def" : "定义字体样式",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "template.html",
+					"att" : {
+						"font" : {
+							"title" : ["设置或检索对象中的文本特性。该属性是复合属性"],
+							"italic small-caps bold 12px/18px SimHei" : "",
+							"oblique bold 24px" : ["无效，不能省字体"]
+						},
+						"font-family" : {
+							"title" : ["设置或检索对象中的字体样式"],
+							"SimSun" : ["宋体"],
+							"Microsoft YaHei" : ["微软雅黑"],
+							"gb2312" : ["楷体"],
+							"Arial" : ["Arial，用于英文，数字"],
+							"SimSun,Microsoft YaHei" : ["多个字体，按优先顺序排列。以逗号隔开"]
+						},
+						"font-size" : {
+							"title" : ["设置或检索对象中的字体尺寸"],
+							"12px" : ["由浮点数字和单位标识符组成的长度值，不可为负值"],
+							"100%" : ["百分数 ，不可为负值。取值是基于父对象中字体的尺寸"],
+							"small" : ["根据对象字体进行调节"],
+							"x-small " : "",
+							"xx-small " : "",
+							"large" : "",
+							"x-large  " : "",
+							"xx-large  " : "",
+							"medium " : ""
+						},
+						"font-style" : {
+							"title" : ["设置或检索对象中的字体样式"],
+							"normal" : ["正常的字体"],
+							"italic" : ["斜体。对于没有斜体变量的特殊字体，将应用oblique"],
+							"oblique" : ["倾斜的字体"]
+						},
+						"font-weight" : {
+							"title" : ["设置或检索对象中的文本字体的粗细"],
+							"normal" : ["正常字体，相当于number为400。声明此值将取消之前任何设置"],
+							"bold " : ["粗体"],
+							"bolder" : ["特粗体"],
+							"lighter" : ["特细体"],
+							"200" : "",
+							"300" : "",
+							"400" : ["正常字体"],
+							"500" : ["500 及以下均是正常字体"],
+							"600" : ["600 及以上均是粗体"],
+							"700" : "",
+							"800" : "",
+							"900" : ""
+						},
+						"font-variant" : {
+							"title" : ["设置或检索对象中的文本是否为小型的大写字母"],
+							"normal" : ["正常的字体"],
+							"small-caps" : ["小型的大写字母字体"]
+						},
+						"line-height" : {
+							"title" : ["检索或设置对象的行高。即字体最底端与字体内部顶端之间的距离。"],
+							"normal" : ["默认行高"],
+							"30px" : ["由浮点数字和单位标识符组成的长度值，不可为负值"],
+							"300%" : ["百分数 ，不可为负值。取值是基于父对象中字体的尺寸"]
+						}
+					}
+				},
+				"color" : {
+					"def" : "检索或设置对象的文本颜色。无默认值",
+					"ins" : [],
+					"cas" : "template.html",
+					"att" : {
+						"color" : {
+							"#ff0000" : ["十六进制颜色码"],
+							"#f00" : ["十六进制颜色码简写"],
+							"blue" : ["英文"],
+							"rgb(100,14,200)" : "",
+							"rgba(100,14,200,0.5)" : [
+								"R —— 红色值，正整数 | 百分数",
+								"G —— 绿色值，正整数 | 百分数",
+								"B —— 蓝色值，正整数 | 百分数",
+								"A —— 透明度。取值0~1之间"
+							],
+							"hsl(240,100%,50%)" : "",
+							"hsla(240,100%,50%,0.2)" : [
+								"H —— 色调，0(或360)表示红色，120表示绿色，240表示蓝色，当然可取其他数值来确定其它颜色",
+								"S —— 饱和度，取值为0%到100%之间的值",
+								"L —— 亮度，取值为0%到100%之间的值",
+								"A —— 透明度。取值0~1之间"
+							]
+						}
+					}
+				},
+				"opacity" : {
+					"def" : "设置或检索用于对象中元素的透明度",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"opacity" : {
+							"0.1" : "",
+							"0.5" : "",
+							"0.8" : ""
+						},
+						"filter" : {
+							"alpha(opacity=10)" : "",
+							"alpha(opacity=50)" : "",
+							"alpha(opacity=80)" : ""
+						},
+						"background-color" : {
+							"red" : "",
+							"blue" : "",
+							"yellow" : ""
+						}
+					}
+				},
+				"text-decoration" : {
+					"def" : "检索或设置对象中的文本的装饰",
+					"ins" : [
+						"有href特性的a，以及u，ins对象默认值为underline",
+						"对象strike，s，del，默认值是line-through",
+						"没有文本的对象此属性不会作用"
+					],
+					"cas" : "template.html",
+					"att" : {
+						"text-decoration" : {
+							"none" : ["无装饰"],
+							"underline" : ["下划线"],
+							"line-through" : ["贯穿线"],
+							"overline" : ["上划线"],
+							"blink" : ["闪烁，一般无效"]
+						},
+						"text-underline-position" : {
+							"title" : ["设置或检索text-decoration属性定义的下划线的位置","IE专用"],
+							"below" : ["在文本下面"],
+							"above" : ["在文本上面"]
+						}
+					}
+				},
+				"text-transform" : {
+					"def" : "检索或设置对象中的文本的大小写",
+					"ins" : [],
+					"cas" : "template.html",
+					"att" : {
+						"text-transform" : {
+							"none" : ["允许字体序列中每一字体遵守它的自己的尺寸"],
+							"capitalize" : ["将每个单词的第一个字母转换成大写，其余无转换发生"],
+							"uppercase" : ["转换成大写"],
+							"lowercase" : ["转换成小写"]
+						}
+					}
+				},
+				"letter-spacing" : {
+					"def" : "检索或设置对象中的文字之间的间隔",
+					"ins" : ["该属性将指定的间隔添加到每个文字之后，但最后一个字将被排除在外"],
+					"cas" : "template.html",
+					"att" : {
+						"letter-spacing" : {
+							"normal" : ["默认间隔"],
+							"1px" : "",
+							"2px" : "",
+							"3px" : "",
+							"4px" : "",
+							"5px" : ["由浮点数字和单位标识符组成的长度值，允许为负值"]
+						}
+					}
+				},
+				"word-spacing" : {
+					"def" : "检索或设置对象中的单词之间插入的空格数",
+					"ins" : ["该属性将指定的间隔添加到每个文字之后，但最后一个字将被排除在外"],
+					"cas" : "template.html",
+					"att" : {
+						"word-spacing" : {
+							"normal" : ["默认间隔"],
+							"1px" : "",
+							"2px" : "",
+							"3px" : "",
+							"4px" : "",
+							"5px" : ["由浮点数字和单位标识符组成的长度值，允许为负值"]
+						}
+					}
+				},
+				"text-shadow" : {
+					"def" : "设置或检索对象中文本的文字是否有阴影及模糊效果",
+					"is5" : 1,
+					"ins" : [
+						"可以设定多组效果，方式是用逗号隔开",
+						"可以被用于伪类:first-letter和 :first-line"
+					],
+					"cas" : "template.html",
+					"att" : {
+						"text-shadow" : {
+							"title" : [
+								"text-shadow : 水平偏移  垂直偏移 模糊 透明度 ",
+								"color : 颜色值",
+								"length : 由浮点数字和单位标识符组成的长度值。可为负值。第一个length指定阴影的水平延伸距离。第二个length指定阴影的垂直延伸距",
+								"blur : 模糊长度",
+								"opacity : 由浮点数字和单位标识符组成的长度值。不可为负值。指定模糊效果的作用距离。如果你仅仅需要模糊效果，将前两个length全部设定为0"
+							],
+							"0 0 1px blue" : "",
+							"0 0 20px yellow, 0 0 10px orange, 5px -5px 0 red" : ""
+						}
+					}
+				},
+				"font-size-adjust" : {
+					"def" : "设置或检索用于对象中文本的字体名称序列是否强制使用同一尺寸",
+					"ins" : [],
+					"isN" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"font-size-adjust" : {
+							"none" : ["允许字体序列中每一字体遵守它的自己的尺寸"],
+							"20px" : ["为字体序列中所有字体强迫指定同一尺寸"]
+						}
+					}
+				},
+				"font-stretch" : {
+					"def" : "设置或检索用于对象中文本的字体名称序列是否强制使用同一尺寸",
+					"ins" : [],
+					"isN" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"font-stretch" : {
+							"normal" : "",
+							"narrower" : "",
+							"wider" : "",
+							"ultra-condensed" : "",
+							"extra-condensed" : "",
+							"condensed" : "",
+							"semi-condensed" : "",
+							"semi-expanded" : "",
+							"expanded" : "",
+							"extra-expanded" : "",
+							"ultra-expanded" : ""
+						}
+					}
+				}
+			}
+		},
+		"text" : {
+			"title" : "文本  Text",
+			"tags" : {
+				"text-align" : {
+					"def" : "设置或检索对象中文本的对齐方式",
+					"ins" : [],
+					"cas" : "template.html",
+					"att" : {
+						"text-align" : {
+							"left" : ["左对齐"],
+							"right" : ["右对齐"],
+							"center" : ["居中"],
+							"justify " : ["两端对齐","非IE"]
+						},
+						"text-justify" : {
+							"title" : ["设置或检索对象内文本的对齐方式","IE 专用"],
+							"auto" : ["允许浏览器用户代理确定使用的两端对齐法则"],
+							"inter-ideograph" : ["为表意字文本提供完全两端对齐。他增加或减少表意字和词间的空格"],
+							"inter-word" : ["通过增加字之间的空格对齐文本。该行为是对齐所有文本行最快的方法。它的两端对齐行为对段落的最后一行无效"],
+							"newspaper" : ["通过增加或减少字或字母之间的空格对齐文本。是用于拉丁文字母表两端对齐的最精确格式"],
+							"distribute" : ["处理空格很像newspaper，适用于东亚文档。尤其是泰国"],
+							"distribute-all-lines" : ["两端对齐行的方式与distribute相同，也同样不包含两段对齐段落的最后一行。适用于表意字文档"]
+						},
+						"-css3-text-align-last" : {"justify" : ""},
+						"width" : {"200px" : ""}
+					}
+				},
+				"vertical-align" : {
+					"def" : "设置或检索对象内容的垂直对齐方式",
+					"ins" : [],
+					"cas" : "vertical-align.html",
+					"att" : {
+						"vertical-align" : {
+							"baseline" : ["将支持valign特性的对象的内容与基线对齐"],
+							"sub" : ["垂直对齐文本的下标"],
+							"super" : ["垂直对齐文本的上标"],
+							"top" : ["将支持valign特性的对象的内容与对象顶端对齐"],
+							"text-top" : ["将支持valign特性的对象的文本与对象顶端对齐"],
+							"middle" : ["将支持valign特性的对象的内容与对象中部对齐"],
+							"bottom" : ["将支持valign特性的对象的文本与对象底端对齐"],
+							"text-bottom" : ["将支持valign特性的对象的文本与对象顶端对齐"],
+							"100px" : ["由浮点数字和单位标识符组成的长度值，可为负数"],
+							"-50%" : "",
+							"50%" : ["百分比，可为负数"]
+						}
+					}
+				},
+				"text-indent" : {
+					"def" : "检索或设置对象中的文本的缩进",
+					"ins" : ["在被另一个对象（如）断开的对象内不能应用本属性"],
+					"cas" : "template.html",
+					"att" : {
+						"text-indent" : {
+							"2em" : "",
+							"32px" : "百分比数字|由浮点数字和单位标识符组成的长度值，允许为负值"
+						}
+					}
+				},
+				"text-overflow" : {
+					"def" : "设置或检索是否使用一个省略标记（...）标示对象内文本的溢出",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"text-overflow" : {
+							"clip": ["不显示省略标记（...），而是简单的裁切"],
+							"ellipsis" : ["当对象内文本溢出时显示省略标记（...） "]
+						},
+						"white-space" : {"nowrap" : ""},
+						"overflow" : {"hidden" : ""},
+						"width" : {"200px" : ""},
+						"height" : {"30px" : ""},
+						"border" : {"1px solid red" : ""}
+					}
+				},
+				"word-wrap | word-break" : {
+					"def" : "自动换行",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "word-break.html",
+					"att" : {
+						"word-wrap" : {
+							"title" : ["设置或检索当当前行超过指定容器的边界时是否断开转行"],
+							"normal": ["依照亚洲语言和非亚洲语言的文本规则，允许在字内换行"],
+							"break-word" : ["内容将在边界内换行。如果需要，词内换行（word-break）也会发生  "]
+						},
+						"word-break" : {
+							"title" : ["设置或检索对象内文本的字内换行行为。尤其在出现多种语言时","IE专用"],
+							"normal": ["依照亚洲语言和非亚洲语言的文本规则，允许在字内换行"],
+							"break-all" : [
+								"该行为与亚洲语言的normal相同。也允许非亚洲语言文本行的任意字内断开。该值适合包含一些非亚洲文本的亚洲文本 ",
+								"对于中文，应该使用break-all"
+							],
+							"keep-all" : ["与所有非亚洲语言的normal相同。对于中文，韩文，日文，不允许字断开。适合包含少量亚洲文本的非亚洲文本 "]
+						},
+						"width" : {"200px" : ""},
+						"border" : {"1px solid red" : ""}
+					}
+				},
+				"white-space" : {
+					"def" : "设置或检索对象内空格的处理方式",
+					"ins" : [],
+					"cas" : "white-space.html",
+					"att" : {
+						"white-space" : {
+							"normal": ["默认处理方式"],
+							"pre" : ["用等宽字体显示预先格式化的文本。不合并字间的空白距离和进行两端对齐"],
+							"nowrap" : ["强制在同一行内显示所有文本，直到文本结束或者遭遇br对象"]
+						},
+						"width" : {"200px" : ""},
+						"border" : {"1px solid red" : ""}
+					}
+				},
+				"direction | unicode-bidi" : {
+					"def" : "用于设置文本流的方向",
+					"ins" : ["假如您想应用direction属性于内联文本，您必须设定unicode-bidi属性为embed或bidi-override"],
+					"cas" : "template.html",
+					"att" : {
+						"direction " : {
+							"ltr": ["文本流从左到右"],
+							"rtl" : ["文本流从右到左"],
+							"inherit" : ["文本流的值不可继承"]
+						},
+						"unicode-bidi " : {
+							"title" : ["用于同一个页面里存在从不同方向读进的文本显示"],
+							"normal": ["对象不打开附加的嵌入层，对于内联要素，隐式重排序跨对象边界进行工作"],
+							"embed" : ["对象打开附加的嵌入层，direction属性的值指定嵌入层，在对象内部进行隐式重排序"],
+							"bidi-override" : ["严格按照direction属性的值重排序。忽略隐式双向运算规则"]
+						},
+						"text-align" : {
+							"left" : "",
+							"right" : "",
+							"center" : "",
+							"justify " : ""
+						}
+					}
+				},
+				"line-break" : {
+					"def" : "设置或检索用于日文文本的换行规则",
+					"ins" : ["IE 专用"],
+					"isN" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"line-break " : {
+							"normal": ["应用日文文本的默认换行规则"],
+							"strict" : ["强制日文文本换行规则的严谨性"]
+						},
+						"width" : {"200px" : ""}
+					}
+				},
+				"writing-mode" : {
+					"def" : "设置或检索对象的内容块固有的书写方向",
+					"ins" : [
+						"西方语言确省的是左-右，上-下的书写方式",
+						"亚洲语言常有上-下，右-左的书写方式",
+						"当此属性值发生变化时，text-align属性与vertical-align属性的作用也将发生变化",
+						"IE 专用"
+					],
+					"isN" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"writing-mode" : {
+							"lr-tb": ["左-右，上-下"],
+							"tb-rl " : ["上-下，右-左"]
+						},
+						"text-align" : {
+							"left" : "",
+							"right" : "",
+							"center" : "",
+							"justify " : ""
+						},
+						"width" : {"200px" : ""}
+					}
+				},
+				"text-autospace" : {
+					"def" : "设置或检索对象文本的自动空格和紧缩空格宽度调整的方式",
+					"ins" : ["表意字是东亚编写系统中的字符，表示一个概念或方法，但不是一个特定的字或词","IE 专用"],
+					"isN" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"text-autospace" : {
+							"none": ["无调整发生"],
+							"ideograph-alpha" : ["表意字和非表意字（如Latin-based，Greek，Cyrillic，Arabic，Hebrew文本）之间创建额外空格"],
+							"ideograph-numeric": ["在表意字和数字字符之间创建额外空格"],
+							"ideograph-parenthesis": ["在常规（非宽度）插入语和表意字之间创建额外空格"],
+							"ideograph-space": ["当空格相邻表意字符时，扩展空格的宽度"]
+						}
+					}
+				},
+				"text-kashida-space" : {
+					"def" : "设置或检索如何拉伸字符来调节文本行排列",
+					"ins" : ["它可以和text-justify属性一起使用","IE 专用"],
+					"isN" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"text-autospace" : {
+							"0%" : ["缺省值"],
+							"50%": ["百分数","标示kashida膨胀与空格膨胀的比例。为100%，仅有kashida膨胀。为0%，仅有空格膨胀。缺省值为0%"]
+						},
+						"text-justify" : {
+							"auto" : "",
+							"inter-ideograph" : "",
+							"inter-word" : "",
+							"newspaper" : "",
+							"distribute" : "",
+							"distribute-all-lines" : ""
+						}
+					}
+				},
+				"ime-mode" : {
+					"def" : "设置或检索是否允许用户激活输入中文，韩文，日文等的输入法（IME）状态",
+					"ins" : [],
+					"isN" : 1,
+					"cas" : "ime-mode.html",
+					"att" : {
+						"ime-mode" : {
+							"auto": ["不影响IME的状态。与不指定ime-mode属性时相同"],
+							"active" : ["指定所有使用IME输入的字符。即激活本地语言输入法。用户仍可以撤销激活IME"],
+							"inactive": ["指定所有不使用IME输入的字符。即激活非本地语言。用户仍可以撤销激活IME"],
+							"disabled": ["完全禁用IME。对于有焦点的控件（如输入框），用户不可以激活IME"]
+						}
+					}
+				},
+				"ruby-align | ruby-overhang | ruby-position" : {
+					"def" : "设置或检索如何拉伸字符来调节文本行排列",
+					"ins" : ["它可以和text-justify属性一起使用","IE 专用"],
+					"isN" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"ruby-align" : {
+							"title" : ["设置或检索通过rt对象指定的注释文本或发音指南（参考ruby对象）的对齐位置"],
+							"auto" : ["由浏览器确定对齐方式。对于ideographic（东亚文本）以distribute-space值对齐。对于Latin文本以center值对齐"],
+							"left": ["根据基本宽度左对齐"],
+							"center": ["根据基本宽度居中对齐。如果基本宽度小于ruby文本的宽度，那么在ruby文本的宽度中居中基本宽度根据基本宽度居中对齐。如果基本宽度小于ruby文本的宽度，那么在ruby文本的宽度中居中基本宽度"],
+							"right": ["根据基本宽度右对齐"],
+							"distribute-letter": ["如果ruby文本的宽度小于基本宽度，则ruby文本在基本宽度中均匀分布。如果ruby文本的宽度大于或等于基本宽度，，居中对齐"],
+							"distribute-space": ["如果ruby文本的宽度小于基本宽度，则ruby文本在基本宽度中均匀分布。在ruby文本中，在第一个字符的前面后最后字符的后面有半个字距的空白区域。如果ruby文本的宽度大于或等于基本宽度，居中对齐"],
+							"line-edge": ["如果ruby文本不相邻行边缘，则其被居中。否则ruby文本行在基本文本边的上方"]
+						},
+						"ruby-overhang" : {
+							"title" : ["设置或检索通过rt对象指定的注释文本或发音指南（参考ruby对象）的位置"],
+							"auto" : ["ruby文本突出相邻基本文本的任何其他文本"],
+							"whitespace": ["ruby文本只突出空白区域的字符"],
+							"none": ["ruby文本只突出相邻基本文本的任何其他文本"]
+						},
+						"ruby-position" : {
+							"title" : [""],
+							"above" : ["在基本文本上方定位ruby文本"],
+							"inline": ["ruby文本与基本文本内联"]
+						}
+					}
+				},
+				"layout-flow" : {
+					"def" : "设置或检索对象内文本的流动和方向",
+					"ins" : ["当此属性值发生变化时，text-align属性与vertical-align属性的作用也将发生变化","IE 专用"],
+					"isN" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"layout-flow" : {
+							"horizontal": ["对象中的内容自左边流入。下一行在前一行下面。这个值适于拉丁语系"],
+							"vertical-ideographic" : ["对象中的内容自上而下流入，下一行在前一行左面。这个值适于亚洲语系"]
+						},
+						"text-align" : {
+							"left" : "",
+							"right" : "",
+							"center" : "",
+							"justify " : ""
+						},
+						"vertical-align" : {
+							"baseline" : "",
+							"top" : "",
+							"text-top" : "",
+							"middle" : "",
+							"bottom" : "",
+							"text-bottom" : ""
+						}
+					}
+				},
+				"layout-grid" : {
+					"def" : "设置或检索复合文档中指定文本字符版式的网格特性",
+					"ins" : ["以东亚语言（如中文，日文）编写的文档通常根据一维或二维网格使用字符的页面版式","IE 专用"],
+					"isN" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"layout-grid" : {
+							"title" : ["复合属性"],
+							"char line 12px 12px 5px": "",
+							"vertical-ideographic" : ["对象中的内容自上而下流入，下一行在前一行左面。这个值适于亚洲语系"]
+						},
+						"layout-grid-char" : {
+							"title" : [
+								"设置或检索应用于对象文本的字符网格值",
+								"要实现此属性，layout-grid-mode必须设置为char或both，其视觉效果类似于line-height属性",
+								"只应用于块对象（如div）"
+							],
+							"none": ["不指定行网格值"],
+							"auto" : ["在对象文本中按最大字符确定网格"],
+							"50%" : ["百分数，其百分比取值是基于父对象尺寸"],
+							"100px" : ["由浮点数字和单位标识符组成的长度值"]
+						},
+						"layout-grid-char-spacing" : {
+							"title" : [
+								"设置或检索字符间隔",
+								"要实现此属性，layout-grid-mode必须设置为char或both。layout-grid-type必须设置为loose。其视觉效果类似于line-height属性"
+							],
+							"auto" : ["在对象文本中按最大字符确定网格"],
+							"50%" : ["百分数，其百分比取值是基于父对象尺寸"],
+							"100px" : ["由浮点数字和单位标识符组成的长度值"]
+						},
+						"layout-grid-line" : {
+							"title" : [
+								"设置或检索应用于对象文本的行网格值",
+								"要实现此属性，layout-grid-mode必须设置为line或both，其视觉效果类似于line-height属性",
+								"只应用于块对象（如div）"
+							],
+							"none": ["不指定行网格值"],
+							"auto" : ["在对象文本中按最大字符确定网格"],
+							"50%" : ["百分数，其百分比取值是基于父对象尺寸"],
+							"100px" : ["由浮点数字和单位标识符组成的长度值"]
+						},
+						"layout-grid-mode" : {
+							"title" : ["设置或检索文本网格版式是否使用二维"],
+							"both": "指定char和line都被启用。要在一个对象上完全启用网格版式，此值是必须的",
+							"line" : ["指定只使用行网格。建议与内联对象（如span）一起使用 "],
+							"char" : ["指定只使用字符网格。建议和块对象（如div）一起使用"],
+							"none" : ["不使用网格"]
+						},
+						"layout-grid-type" : {
+							"title" : ["设置或检索应用于对象文本的网格类型","只应用于块对象（如div）"],
+							"loose": "指定在中文或韩文中使用网格的文本，只有象形文字，假名，宽字符域网格对齐。其余的和通常一样，尽管包含这些字符的文本范围的layout-grid-mode被设置为none或line。该模式还禁用通常用于对象文本的特殊文本对齐和字符宽度调整。最后，如果不能再换行边界的文本中找到一个换行机会，那么文本将被推至下一行，并且上一行的最后留出空白",
+							"strict" : ["指定在日文中使用网格。规则为：如果没有其他的宽度调整效果，则增加宽字符以获取精确的网格填充。窄字符（除了草书字体）按照应用于宽字符的一半增量增加"],
+							"fixed" : ["指定使用于等宽版式网格。规则为：所有非草书符号视为等宽。默认情况下，每个字符在单一网格中居中。禁止对齐或任何其他改变字符宽度的行为"]
+						}
+					}
+				}
+			}
+		},
+		"background" : {
+			"title" : "背景 background",
+			"tags" : {
+				"background" : {
+					"def" : "检索或设置对象的背景",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "background.html",
+					"att" : {
+						"background" : {
+							"title" : ["复合写法","background-color || background-image || background-repeat || background-attachment || background-position "],
+							"transparent none repeat scroll 0% 0%" : ["默认值"],
+							"yellow url(case/images/test.png) no-repeat scroll 5% 60%" : ""
+						},
+						"background-color" : {
+							"title" : ["设置或检索对象的背景颜色"],
+							"transparent" : ["背景色透明"],
+							"gray" : ["指定颜色"]
+						},
+						"background-image" : {
+							"title" : ["设置或检索对象的背景图像"],
+							"none" : ["无背景图"],
+							"url(case/images/test.png)" : ["使用绝对或相对地址指定背景图像"]
+						},
+						"background-repeat" : {
+							"title" : [
+								"设置或检索对象的背景图像是否及如何铺排",
+								"必须先指定background-image属性"
+							],
+							"repeat" : ["背景图像在纵向和横向上平铺"],
+							"no-repeat" : ["背景图像不平铺"],
+							"repeat-x" : ["背景图像横向平铺"],
+							"repeat-y" : ["背景图像纵向平铺"]
+						},
+						"background-position" : {
+							"title" : [
+								"设置或检索对象的背景图像位置",
+								"必须先指定background-image属性",
+								"该属性定位不受对象的补丁属性(padding)设置影响"
+							],
+							"0% 0%" : ["默认值"],
+							"100px" : [
+								"如果只指定了一个值，该值将用于横坐标。纵坐标将默认为50%",
+								"百分数或由浮点数字和单位标识符组成的长度值"
+							],
+							"center right" : ["横坐标，纵坐标","top | center | bottom | left | center | right"]
+						},
+						"background-position-x" : {
+							"title" : [
+								"设置或检索对象的背景图像横坐标位置",
+								"必须先指定background-image属性",
+								"该属性定位不受对象的补丁属性(padding)设置影响"
+							],
+							"0%" : ["默认值"],
+							"100px" : ["百分数或由浮点数字和单位标识符组成的长度值"],
+							"left" : ["居左"],
+							"center" : ["居中"],
+							"right" : ["居右"]
+						},
+						"background-position-y" : {
+							"title" : [
+								"设置或检索对象的背景图像纵坐标位置",
+								"必须先指定background-image属性",
+								"该属性定位不受对象的补丁属性(padding)设置影响"
+							],
+							"0%" : ["默认值"],
+							"100px" : ["百分数或由浮点数字和单位标识符组成的长度值"],
+							"top" : ["居顶"],
+							"center" : ["居中"],
+							"bottom" : ["居底"]
+						},
+						"background-attachment" : {
+							"title" : ["设置或检索背景图像是随对象内容滚动还是固定的"],
+							"scroll" : ["背景图像是随对象内容滚动"],
+							"fixed" : ["背景图像固定"]
+						},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"padding" : {"50px" : ""},
+						"border" : {"1px solid blue" : ""}
+					}
+				},
+				"background-origin" : {
+					"def" : "用来决定 background-position 计算的参考位置",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "background.html",
+					"att" : {
+						"-css3-background-origin" : {
+							"border" : ["从border区域开始显示背景"],
+							"padding" : ["从padding区域开始显示背景"],
+							"content" : ["从content区域开始显示背景"]
+						},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"padding" : {"50px" : ""},
+						"border" : {"5px solid blue" : ""}
+					}
+				},
+				"background-clip" : {
+					"def" : "用来确定背景的裁剪区域",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "background.html",
+					"att" : {
+						"-css3-background-clip" : {
+							"border-box" : ["从border区域向外裁剪背景"],
+							"padding-box" : ["从padding区域向外裁剪背景"],
+							"content-box" : ["从content区域向外裁剪背景"],
+							"no-clip" : ["从border区域向外裁剪背景"]
+						},
+						"background" : {"url(case/images/test.png) no-repeat scroll 5px 5px" : ""},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"padding" : {"50px" : ""},
+						"border" : {"5px solid blue" : ""}
+					}
+				},
+				"background-size" : {
+					"def" : "设置背景图片的大小",
+					"ins" : ["指定背景大小，以象素或百分比显示。当指定为百分比时，大小会由所在区域的宽度、高度，以及background-origin的位置决定","还可以通过cover和contain来对图片进行伸缩"],
+					"is5" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"-css3-background-size" : {
+							"auto" : ["自动"],
+							"50px 50px" : ["由浮点数字和单位标识符组成的长度值。不可为负值"],
+							"50% 100px" : [" 取值为0%到100%之间的值。不可为负值"],
+							"cover" : [
+								"等比例铺满盒子，适用于过大的图片",
+								"把背景图像扩展至足够大，以使背景图像完全覆盖背景区域",
+								"背景图像的某些部分也许无法显示在背景定位区域中",
+								"图片过小，可能会显示不全图片"
+							],
+							"contain" : [
+								"等比例铺满盒子，适用于过小的图片",
+								"把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域",
+								"假如指定的图片尺寸过大，而背景区域的整体宽高不能恰好包含背景图片的话，那么其背景某些区域可能会有空白"
+							]
+						},
+						"-css3-background-origin" : {"border" : "","padding" : "","content" : ""},
+						"background" : {"url(case/images/test.png) no-repeat scroll 0 0" : ""},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"padding" : {"50px" : ""},
+						"border" : {"10px solid blue" : ""}
+					}
+				},
+				"Multiple backgrounds" : {
+					"def" : "多重背景图象，可以把不同背景图象只放到一个块元素里",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "background.html",
+					"att" : {
+						"background" : {
+							"title" : ["复合写法"],
+							"url(case/images/01.png) no-repeat left bottom,url(case/images/02.png) no-repeat right top" : ""
+						},
+						"background-image" : {"url(case/images/01.png),url(case/images/02.png)" : ""},
+						"background-repeat" : {
+							"no-repeat,no-repeat" : "",
+							"repeat-y,repeat-x" : ""
+						},
+						"background-position" : {
+							"left bottom,right top" : "",
+							"left top,right bottom" : "",
+							"left center,right center" : ""
+						},
+						"-css3-background-origin" : {"border,content" : "","padding,border" : ""},
+						"-css3-background-size" : {"50px 50px,100px 100px" : "","50% 50%,20% 20%" : ""},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"padding" : {"50px" : ""},
+						"border" : {"5px solid blue" : ""}
+					}
+				},
+				"layer-background-color | layer-background-image" : {
+					"def" : "设置或检索对象整个区域的背景颜色和图像",
+					"ins" : [],
+					"isN" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"layer-background-color" : {
+							"title" : ["设置或检索对象整个区域的背景颜色"],
+							"transparent" : ["背景色透"],
+							"red" : ["指定颜色"]
+						},
+						"layer-background-image" : {
+							"title" : ["设置或检索对象整个区域的背景图像"],
+							"none" : ["无背景图"],
+							"url(case/images/test.png)" : ["使用绝对或相对地址指定背景图像"]
+						}
+					}
+				}
+			}
+		},
+		
+		"dimensions" : {
+			"title" : "尺寸 Dimensions",
+			"tags" : {
+				"dimensions" : {
+					"def" : "检索或设置对象的尺寸",
+					"ins" : ["按照样式表的规则，对象的实际高度为其下列属性值之和：margin-top + border-top + padding-top + height + padding-bottom + border-bottom + margin-bottom"],
+					"cas" : "width.html",
+					"att" : {
+						"width" : {
+							"title" : ["检索或设置对象的宽度","对于 img 来说，仅指定此属性，其 height 值将根据图片源尺寸等比例缩放"],
+							"auto" : ["默认值。无特殊定位，根据HTML定位规则分配"],
+							"250px" : ["由浮点数字和单位标识符组成的长度值"],
+							"50%" : ["百分数，百分数是基于父对象的高度。不可为负数"]
+						},
+						"min-width" : {
+							"title" : ["设置或检索对象的最小宽度","如果此属性的值大于 max-width 属性的值，将会被自动转设为 max-width 属性的值"],
+							"auto" : ["默认值。无特殊定位，根据HTML定位规则分配"],
+							"200px" : ["由浮点数字和单位标识符组成的长度值"],
+							"50%" : ["百分数，百分数是基于父对象的高度。不可为负数"]
+						},
+						"max-width" : {
+							"title" : ["设置或检索对象的最大宽度","如果此属性的值小于 minwidth 属性的值，将会被自动转设为 minwidth 属性的值"],
+							"auto" : ["默认值。无特殊定位，根据HTML定位规则分配"],
+							"300px" : ["由浮点数字和单位标识符组成的长度值"],
+							"50%" : ["百分数，百分数是基于父对象的高度。不可为负数"]
+						},
+						"height" : {
+							"title" : ["检索或设置对象的高度","对于 img 对象来说，仅指定此属性，其 width 值将根据图片源尺寸等比例缩放"],
+							"auto" : ["默认值。无特殊定位，根据HTML定位规则分配"],
+							"250px" : ["由浮点数字和单位标识符组成的长度值"],
+							"50%" : ["百分数，百分数是基于父对象的高度。不可为负数"]
+						},
+						"min-height" : {
+							"title" : ["设置或检索对象的最小高度","如果此属性的值大于 max-height 属性的值，将会被自动转设为 max-height 属性的值"],
+							"auto" : ["默认值。无特殊定位，根据HTML定位规则分配"],
+							"200px" : ["由浮点数字和单位标识符组成的长度值"],
+							"50%" : ["百分数，百分数是基于父对象的高度。不可为负数"]
+						},
+						"max-height" : {
+							"title" : ["设置或检索对象的最大高度","如果此属性的值小于 min-height 属性的值，将会被自动转设为 min-height 属性的值"],
+							"auto" : ["默认值。无特殊定位，根据HTML定位规则分配"],
+							"300px" : ["由浮点数字和单位标识符组成的长度值"],
+							"50%" : ["百分数，百分数是基于父对象的高度。不可为负数"]
+						},
+						"display" : {
+							"block" : "",
+							"inline-block" : "",
+							"inline \\9" : "",
+							"zoom:1 \\9" : ""
+						},
+						"border" : {"2px solid blue" : ""}
+					}
+				}
+			}
+		},
+		"layout" : {
+			"title" : "布局  Layout",
+			"tags" : {
+				"float" : {
+					"def" : "该属性的值指出了对象是否及如何浮动",
+					"ins" : ["当该属性不等于 none 引起对象浮动时，对象将被视作块对象( block-level )，即 display 属性等于 block 。也就是说，浮动对象的 display 属性将被忽略"],
+					"cas" : "float.html",
+					"att" : {
+						"float" : {
+							"none" : ["默认值。对象不飘浮"],
+							"left" : ["文本流向对象的右边"],
+							"right" : ["文本流向对象的左边"]
+						},
+						"clear" : {
+							"title" : ["清除浮动。"],
+							"none" : ["默认值。允许两边都可以有浮动对象"],
+							"left" : ["不允许左边有浮动对象"],
+							"right" : ["不允许右边有浮动对象"],
+							"both" : ["不允许有浮动对象"]
+						},
+						"clearfix" : {
+							"title" : [".clearfix:after{content:'';display:block;height:0;clear:both;visibility:hidden}"]
+						},
+						"border" : {"1px solid red" : ""}
+					}
+				},
+				"clip" : {
+					"def" : "检索或设置对象的可视区域。可视区域外的部分是透明的",
+					"ins" : ["此属性定义了绝对(absolute)定位对象可视区域的尺寸。必须将 position 属性的值设为 absolute ，此属性方可使用"],
+					"cas" : "clip.html",
+					"att" : {
+						"clip" : {
+							"auto" : ["默认值。对象无剪切 "],
+							"rect(0 100px 100px 0)" : "",
+							"rect(100px 100px 200px 0)" : ["依据上-右-下-左的顺序提供自对象左上角为(0,0)坐标计算的四个偏移数值，其中任一数值都可用 auto 替换，即此边不剪切"]
+						},
+						"position" : {"absolute" : "","fixed" : ""},
+						"left" : {"100px" : ""},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"border" : {"1px solid red" : ""}
+					}
+				},
+				"overflow" : {
+					"def" : "检索或设置当对象的内容超过其指定高度及宽度时如何管理内容",
+					"ins" : [
+						"所有对象的默认值是 visible ，除了 textarea 对象和 body 对象的默认值是 auto",
+						"设置 textarea 对象此属性值为 hidden 将隐藏其滚动条"
+					],
+					"cas" : "overflow.html",
+					"att" : {
+						"overflow" : {
+							"visible" : ["默认值。不剪切内容也不添加滚动条。假如显式声明此默认值，对象将以包含对象的 window 或 frame 的尺寸裁切。并且 clip 属性设置将失效"],
+							"auto" : ["在必需时对象内容才会被裁切或显示滚动条"],
+							"hidden" : ["不显示超过对象尺寸的内容"],
+							"scroll" : ["总是显示滚动条"]
+						},
+						"overflow-x" : {
+							"title" : ["检索或设置当对象的内容超过其指定宽度时如何管理内容"],
+							"visible" : "",
+							"auto" : "",
+							"hidden" : "",
+							"scroll" : ""
+						},
+						"overflow-y" : {
+							"title" : ["检索或设置当对象的内容超过其指定宽度时如何管理内容"],
+							"visible" : "",
+							"auto" : "",
+							"hidden" : "",
+							"scroll" : ""
+						},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"border" : {"1px solid red" : ""}
+					}
+				},
+				"visibility" : {
+					"def" : "设置或检索是否显示对象",
+					"ins" : ["与 display 属性不同，此属性为隐藏的对象保留其占据的物理空间"],
+					"cas" : "visibility.html",
+					"att" : {
+						"visibility" : {
+							"inherit" : ["默认值。继承父对象的可见性"],
+							"visible" : ["对象可视"],
+							"collapse" : ["主要用来隐藏表格的行或列。隐藏的行或列能够被其他内容使用。对于表格外的其他对象，其作用等同于 hidden"],
+							"hidden" : ["对象可视"]
+						},
+						"height" : {"200px" : ""},
+						"background-color" : {"yellowgreen" : ""},
+						"border" : {"1px solid red" : ""}
+					}
+				},
+				"display" : {
+					"def" : "设置对象是否及如何显示",
+					"ins" : [],
+					"cas" : "display.html",
+					"att" : {
+						"display" : {
+							"none" : ["隐藏对象。与 visibility 属性的hidden值不同，其不为被隐藏的对象保留其物理空间"],
+							"block" : ["块对象的默认值。将对象强制作为块对象呈递，为对象之后添加新行"],
+							"inline" : ["内联对象的默认值。将对象强制作为内联对象呈递，从对象中删除行"],
+							"inline-block" : ["将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内"],
+							"list-item" : ["将块对象指定为列表项目。并可以添加可选项目标志","必须与 list-style 配合使用"],
+							"table-header-group" : ["将对象作为表格标题组显示"],
+							"table-footer-group" : ["将对象作为表格脚注组显示"],
+							"compact" : ["分配对象为块对象或基于内容之上的内联对象"],
+							"marker" : ["指定内容在容器对象之前或之后。要使用此参数，对象必须和 :after 及 :before 伪元素一起使用"],
+							"inline-table" : ["将表格显示为无前后换行的内联对象或内联容器"],
+							"run-in" : ["分配对象为块对象或基于内容之上的内联对象"],
+							"table" : ["将对象作为块元素级的表格显示"],
+							"table-caption" : ["将对象作为表格标题显示"],
+							"table-cell" : ["将对象作为表格单元格显示"],
+							"table-column" : ["将对象作为表格列显示"],
+							"table-column-group" : ["将对象作为表格列组显示"],
+							"table-row" : ["将对象作为表格行显示"],
+							"table-row-group" : ["将对象作为表格行组显示"]
+						},
+						"list-style" : {"outside square" : ["配合 list-item"]},
+						"margin-left" : {"30px" : ["配合 list-item"]},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"border" : {"1px solid red" : ""}
+					}
+				}
+			}
+		},
+		"margin" : {
+			"title" : "外补丁 margin",
+			"tags" : {
+				"margin" : {
+					"def" : "检索或设置对象的外补丁",
+					"ins" : [
+						"参数是，由浮点数字和单位标识符组成的长度值 | 百分数，百分数是基于父对象的高度。除了内联对象的上下外补丁外，支持使用负数值",
+						"不支持用于 td 和 th 对象",
+						"在旧浏览器中，内联要素要使用该属性，必须先设定对象的 height 或 width 属性，或者设定 position 属性为 absolute ，或者设定 display 属性为 block|inline-block"
+					],
+					"cas" : "margin.html",
+					"att" : {
+						"margin" : {
+							"title" : [
+								"检索或设置对象四边的外补丁",
+								"如果提供全部四个参数值，将按top－right－bottom－left的顺序作用于四边",
+								"如果只提供一个，将用于全部的四边",
+								"如果提供两个，第一个用于top－bottom，第二个用于left－right",
+								"如果提供三个，第一个用于top，第二个用于left－right，第三个用于bottom"
+								
+							],
+							"auto" : ["取计算机值"],
+							"0 auto" : ["水平居中"],
+							"20px" : "",
+							"20px 30px" : "",
+							"20px 30px 50px" : "相当于 20px 30px 50px 30px",
+							"50px 20px 10% 30px" : ""
+						},
+						"margin-top" : {
+							"title" : ["检索或设置对象顶边的外补丁"],
+							"auto" : "",
+							"30px" : "",
+							"20%" : ""
+						},
+						"margin-right" : {
+							"title" : ["检索或设置对象右边的外补丁"],
+							"auto" : "",
+							"30px" : "",
+							"20%" : ""
+						},
+						"margin-bottom" : {
+							"title" : ["检索或设置对象底边的外补丁"],
+							"auto" : "",
+							"30px" : "",
+							"20%" : ""
+						},
+						"margin-left" : {
+							"title" : ["检索或设置对象左边的外补丁"],
+							"auto" : "",
+							"30px" : "",
+							"20%" : ""
+						},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"display" : {"block" : "","inline-block" : ""},
+						"border" : {"1px solid red" : ""}
+					}
+				}
+			}
+		},
+		"padding" : {
+			"title" : "内补丁 padding",
+			"tags" : {
+				"padding" : {
+					"def" : "检索或设置对象的内补丁",
+					"ins" : [
+						"参数是，由浮点数字和单位标识符组成的长度值 | 百分数，百分数是基于父对象的高度。除了内联对象的上下外补丁外，支持使用负数值",
+						"对于 td 和 th 对象而言默认值为 1 。其他对象的默认值为 0",
+						"在旧浏览器中，内联要素要使用该属性，必须先设定对象的 height 或 width 属性，或者设定 position 属性为 absolute ，或者设定 display 属性为 block|inline-block"
+					],
+					"cas" : "padding.html",
+					"att" : {
+						"padding" : {
+							"title" : [
+								"检索或设置对象四边的内补丁",
+								"如果提供全部四个参数值，将按top－right－bottom－left的顺序作用于四边",
+								"如果只提供一个，将用于全部的四边",
+								"如果提供两个，第一个用于top－bottom，第二个用于left－right",
+								"如果提供三个，第一个用于top，第二个用于left－right，第三个用于bottom"
+								
+							],
+							"auto" : ["取计算机值"],
+							"20px" : "",
+							"20px 30px" : "",
+							"20px 30px 50px" : "相当于 20px 30px 50px 30px",
+							"50px 20px 10% 30px" : ""
+						},
+						"padding-top" : {
+							"title" : ["检索或设置对象顶边的内补丁"],
+							"auto" : "",
+							"30px" : "",
+							"20%" : ""
+						},
+						"padding-right" : {
+							"title" : ["检索或设置对象右边的内补丁"],
+							"auto" : "",
+							"30px" : "",
+							"20%" : ""
+						},
+						"padding-bottom" : {
+							"title" : ["检索或设置对象底边的内补丁"],
+							"auto" : "",
+							"30px" : "",
+							"20%" : ""
+						},
+						"padding-left" : {
+							"title" : ["检索或设置对象左边的内补丁"],
+							"auto" : "",
+							"30px" : "",
+							"20%" : ""
+						},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"display" : {"block" : "","inline-block" : ""},
+						"border" : {"1px solid red" : ""}
+					}
+				}
+			}
+		},
+		"position" : {
+			"title" : "定位 position",
+			"tags" : {
+				"position" : {
+					"def" : "设置或检索对象的定位方式",
+					"ins" : ["top,right,bottom,left,z-index 必须定义 position 属性值为 absolute 或者 relative 此取值方可生效"],
+					"cas" : "position.html",
+					"att" : {
+						"position" : {
+							"static" : ["默认值。无特殊定位，对象遵循HTML定位规则"],
+							"relative" : [
+								"相对定位",
+								"对象不可层叠，但将依据 left ， right ， top ， bottom 等属性在正常文档流中偏移位置"
+							],
+							"absolute" : [
+								"绝对定位",
+								"将对象从文档流中拖出，使用 left ， right ， top ， bottom 等属性相对于其最接近的一个最有定位设置的父对象进行绝对定位",
+								"如果不存在这样的父对象，则依据 body 对象。而其层叠通过 z-index 属性定义"
+							],
+							"fixed" : ["固定定位","对象定位遵从绝对(absolute)方式。但是要遵守一些规范"]
+						},
+						"top" : {
+							"auto" : ["默认值。无特殊定位，根据HTML定位规则在文档流中分配"],
+							"0" : "",
+							"200px" : ["由浮点数字和单位标识符组成的长度值"],
+							"50%" : ["百分数"]
+						},
+						"right" : {
+							"auto" : ["默认值。无特殊定位，根据HTML定位规则在文档流中分配"],
+							"0" : "",
+							"100px" : ["由浮点数字和单位标识符组成的长度值"],
+							"50%" : ["百分数"]
+						},
+						"bottom" : {
+							"auto" : ["默认值。无特殊定位，根据HTML定位规则在文档流中分配"],
+							"0" : "",
+							"100px" : ["由浮点数字和单位标识符组成的长度值"],
+							"50%" : ["百分数"]
+						},
+						"left" : {
+							"auto" : ["默认值。无特殊定位，根据HTML定位规则在文档流中分配"],
+							"0" : "",
+							"100px" : ["由浮点数字和单位标识符组成的长度值"],
+							"50%" : ["百分数"]
+						},
+						"z-index" : {
+							"title" : [
+								"检索或设置对象的层叠顺序",
+								"较大 number 值的对象会覆盖在较小 number 值的对象之上",
+								"如两个绝对定位对象的此属性具有同样的 number 值，那么将依据它们在HTML文档中声明的顺序层叠",
+								"对于未指定此属性的绝对定位对象，此属性的 number 值为正数的对象会在其之上，而 number 值为负数的对象在其之下"
+							],
+							"0" : ["默认"],
+							"-1" : ["不可操作"],
+							"1" : "",
+							"null" : ["移除此属性"]
+						},
+						"border" : {"2px solid blue" : ""},
+						"background-color" : {"yellow" : ""}
+					}
+				}
+			}
+		},
+		"border" : {
+			"title" : "边框 border",
+			"tags" : {
+				"border" : {
+					"def" : "设置或检索对象的边框样式",
+					"ins" : ["外轮廓( outline )画在边框( border )外面，并且不一定是矩形"],
+					"cas" : "background.html",
+					"att" : {
+						"border" : {
+							"title" : [
+								"复合属性",
+								"当你指定了边框颜色( border-color )和边框宽度( border-width )时，你必须同时指定边框样式( border-style )，否则边框不会被呈现",
+								"如使用该复合属性定义其单个参数，则其他参数的默认值将无条件覆盖各自对应的单个属性设置"
+							],
+							"1px solid" : ["width 与  style 必设，颜色默认黑色"],
+							"1px solid red" : ["width | style | color","顺序可换"]
+						},
+						"border-color" : {
+							"title" : ["设置或检索对象边框的颜色"],
+							"yellowgreen" : ["指定颜色"],
+							"yellowgreen blue red yellow" : ["top | right | bottom | left","不可随意换"]
+						},
+						"border-style" : {
+							"title" : ["设置或检索对象外的线条轮廓( outline )的样式"],
+							"none" : ["默认值。无边框。与任何指定的 outline-width 值无关"],
+							"solid" : ["实线"],
+							"dotted" : ["点线"],
+							"dashed" : ["虚线"],
+							"double" : ["双线。两条单线与其间隔的和等于指定的 oueline-width 值"],
+							"groove" : ["根据 outline-color 的值画3D凹槽"],
+							"ridge" : ["根据 outline-color 的值画3D凸槽"],
+							"inset" : ["根据 outline-color 的值画3D凹边 "],
+							"outset" : ["根据 outline-color 的值画3D凸边"],
+							"groove ridge inset outset" : "",
+							"solid dotted dashed double" : ["top | right | bottom | left","不可随意换"]
+						},
+						"border-width" : {
+							"title" : ["设置或检索对象边框的宽度"],
+							"medium" : ["默认值，默认宽度"],
+							"thin" : ["小于默认宽度"],
+							"thick" : ["大于默认宽度"],
+							"20px" : ["由浮点数字和单位标识符组成的长度值。不可为负值"],
+							"10px 5px 20px 1px" : ["top | right | bottom | left","不可随意换"]
+						},
+						"border-top-color" : {"green" : ""},
+						"border-right-color" : {"blue" : ""},
+						"border-bottom-color" : {"yellow" : ""},
+						"border-left-color" : {
+							"title" : ["设置单边颜色"],
+							"black" : ""
+						},
+						
+						"border-top-style" : {"solid" : ""},
+						"border-right-style" : {"dotted" : ""},
+						"border-bottom-style" : {"dashed" : ""},
+						"border-left-style" : {
+							"title" : ["设置单边样式"],
+							"double" : ""
+						},
+						
+						"border-top-width" : {"5px" : ""},
+						"border-right-width" : {"10px" : ""},
+						"border-bottom-width" : {"20px" : ""},
+						"border-left-width" : {
+							"title" : ["设置单边宽度"],
+							"30px" : ""
+						},
+						
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"margin" : {"20px" : ""}
+					}
+				},
+				"-css3-border-radius" : {
+					"def" : "css3 圆角",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "background.html",
+					"att" : {
+						"-css3-border-radius" : {
+							"10px" : "",
+							"20px" : ["由浮点数字和单位标识符组成的长度值。不可为负值"],
+							"100%" : ["最大圆角"],
+							"5px 10px 20px 30px" : ["top-right-bottom-left"]
+						},
+						
+						"-css3-border-top-right-radius" : {
+							"title" : ["单角设置，右上角"],
+							"20px" : ""
+						},
+						"-css3-border-bottom-right-radius" : {
+							"title" : ["单角设置，右下角"],
+							"20px" : ""
+						},
+						"-css3-border-bottom-left-radius" : {
+							"title" : ["单角设置，左下角"],
+							"20px" : ""
+						},
+						"-css3-border-top-left-radius" : {
+							"title" : ["单角设置，左上角"],
+							"20px" : ""
+						},
+						"border" : {"5px solid red" : ""},
+						"background-color" : {"yellowgreen" : ""},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"margin" : {"20px" : ""}
+					}
+				},
+				"-css3-border-color" : {
+					"def" : "css3 圆角",
+					"ins" : ["火狐专用"],
+					"isN" : 1,
+					"cas" : "background.html",
+					"att" : {
+						"-moz-border-color" : {
+							"title" : ["设置对象边框的颜色","使用CSS3的border-radius属性，如果你设置了border的宽度是X px，那么你就可以在这个border上使用X种颜色，每种颜色显示1px的宽度。如果说你的border的宽度是10个像素，但是只声明了5或6种颜色，那么最后一个颜色将被添加到剩下的宽度"],
+							"green blue yellow black" : ["多个颜色"]
+						},
+						"-css3-border-radius" : {"20px" : ""},
+						"border" : {"5px solid red" : ""},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"margin" : {"20px" : ""}
+					}
+				},
+				"-css3-box-shadow" : {
+					"def" : "设置块阴影",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "background.html",
+					"att" : {
+						"-css3-box-shadow" : {
+							"5px 2px 6px #000" : ["阴影水平偏移值（可取正负值）| 阴影垂直偏移值（可取正负值）| 阴影模糊值 | 阴影颜色 "],
+							"5px 5px 5px red,10px 10px 10px blue,-5px -5px 3px green,-15px 15px 3px black" : ["可设置无限个 "]
+						},
+						"background-color" : {"yellowgreen" : ""},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"margin" : {"20px" : ""}
+					}
+				}
+			}
+		},
+		"outline" : {
+			"title" : "轮廓 outline",
+			"tags" : {
+				"outline" : {
+					"def" : "设置或检索对象外的线条轮廓",
+					"ins" : ["外轮廓( outline )画在边框( border )外面，并且不一定是矩形"],
+					"cas" : "template.html",
+					"att" : {
+						"outline" : {
+							"title" : ["复合属性"],
+							"1px double green" : ["width | style | color | offset","顺序可换"]
+						},
+						"outline-color" : {
+							"title" : ["设置或检索对象外的线条轮廓( outline )的颜色"],
+							"invert" : ["默认值。使用背景色的反色"],
+							"yellowgreen" : ["指定颜色"]
+						},
+						"outline-style" : {
+							"title" : ["设置或检索对象外的线条轮廓( outline )的样式"],
+							"none" : ["默认值。无边框。与任何指定的 outline-width 值无关"],
+							"solid" : ["实线外轮廓"],
+							"dotted" : ["点线外轮廓"],
+							"dashed" : ["虚线外轮廓"],
+							"double" : ["双线外轮廓。两条单线与其间隔的和等于指定的 oueline-width 值"],
+							"groove" : ["根据 outline-color 的值画3D凹槽外轮廓"],
+							"ridge" : ["根据 outline-color 的值画3D凸槽外轮廓"],
+							"inset" : ["根据 outline-color 的值画3D凹边外轮廓 "],
+							"outset" : ["根据 outline-color 的值画3D凸边外轮廓"]
+						},
+						"outline-width" : {
+							"title" : ["设置或检索对象外的线条轮廓( outline )的宽度"],
+							"medium" : ["默认值，默认宽度"],
+							"thin" : ["小于默认宽度"],
+							"thick" : ["大于默认宽度"],
+							"20px" : ["由浮点数字和单位标识符组成的长度值。不可为负值"]
+						},
+						"outline-offset" : {
+							"title" : ["指定轮廓边框偏移位置的数值"],
+							"5px" : ["定义轮廓距离容器的值"],
+							"inherit" : ["默认继承"]
+						},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"margin" : {"50px" : ""},
+						"border" : {"1px solid red" : ""}
+					}
+				}
+			}
+		},
+		"list" : {
+			"title" : "列表 List",
+			"tags" : {
+				"list" : {
+					"def" : "设置列表项目相关样式",
+					"ins" : [
+						"若 list-style-image 属性值为 none 或指定 url 地址的图片不能被显示时， list-style-type 属性将发生作用",
+						"假如一个列表项目的左外补丁( margin-left )被设置为 0 ，则列表项目标记不会被显示。左外补丁( margin-left )最小可以被设置为 30",
+						"仅作用于具有 display 属性值等于 list-item 的对象。如 li 对象",
+						"注意：ol 对象和 ul 对象的 type 属性为其后的所有列表项目(如 li 对象)指明列表属性"
+					],
+					"cas" : "list.html",
+					"att" : {
+						"list-style" : {
+							"title" : ["复合属性"],
+							"url(case/images/01.png) inside circle" : "",
+							"outside square" : ""
+						},
+						"list-style-image" : {
+							"title" : ["设置或检索作为对象的列表项标记的图像","若此属性值为 none 或指定 url 地址的图片不能被显示时， list-style-type 属性将发生作用"],
+							"none" : ["默认值。不指定图像"],
+							"url(case/images/05.png)" : ["使用绝对或相对 url 地址指定图像"]
+						},
+						"list-style-position" : {
+							"title" : ["设置或检索作为对象的列表项标记如何根据文本排列"],
+							"outside" : ["默认值。列表项目标记放置在文本以外，且环绕文本不根据标记对齐"],
+							"inside" : ["列表项目标记放置在文本以内，且环绕文本根据标记对齐"]
+						},
+						"list-style-type" : {
+							"title" : ["设置或检索对象的列表项所使用的预设标记"],
+							"disc" : ["默认值。实心圆"],
+							"circle" : ["空心圆"],
+							"decimal" : ["阿拉伯数字"],
+							"lower-roman" : ["小写罗马数字"],
+							"upper-roman" : ["大写罗马数字"],
+							"lower-alpha" : ["小写英文字母"],
+							"upper-alpha" : ["大写英文字母"],
+							"none" : ["不使用项目符号"],
+							"armenianl" : ["传统的亚美尼亚数字"],
+							"cjk-ideographic " : ["浅白的表意数字"],
+							"georgian" : ["传统的乔治数字"],
+							"lower-greek" : ["基本的希腊小写字母"],
+							"hebrew" : ["传统的希伯莱数字"],
+							"hiragana" : ["日文平假名字符"],
+							"hiragana-iroha" : ["日文平假名序号"],
+							"katakana" : ["日文片假名字符"],
+							"katakana-iroha" : ["日文片假名序号"],
+							"lower-latin" : ["小写拉丁字母"],
+							"upper-latin" : ["大写拉丁字母"]
+						},
+						"margin-left" : {"30px" : ""},
+						"display" : {
+							"list-item" : ["给不是列表元素添加预设标记，调整兼容性"]
+						}
+					}
+				},
+				"marker-offset" : {
+					"def" : "设置或检索标记容器和主容器之间水平补白。即两个容器靠近的一边的间距",
+					"ins" : ["作用于 display 属性值为 marker 的元素"],
+					"isN" : 1,
+					"cas" : "list.html",
+					"att" : {
+						"marker-offset:before" : {
+							"auto" : ["默认值。浏览器自动设置间距"],
+							"20px" : "",
+							"50px" : ["由浮点数字和单位标识符组成的长度值。可为负值"]
+						},
+						"display:before" : {
+							"marker" : ""
+						}
+					}
+				}
+			}
+		},
+		"table" : {
+			"title" : "表格 Table",
+			"tags" : {
+				"table" : {
+					"def" : "设置表格样式",
+					"ins" : [],
+					"cas" : "table.html",
+					"att" : {
+						"border-collapse" : {
+							"title" : ["设置或检索表格的行和单元格的边是合并在一起还是按照标准的HTML样式分开"],
+							"separate" : ["默认值。边框独立（标准HTML）"],
+							"collapse" : ["相邻边被合并"]
+						},
+						"border-spacing" : {
+							"title" : ["设置或检索当表格边框独立，行和单元格的边在横向和纵向上的间距","当 border-collapse 属性等于 separate 时生效"],
+							"5px" : ["当只指定一个 length 值时，这个值将作用于横向和纵向上的间距"],
+							"10px" : ["由浮点数字和单位标识符组成的长度值。不可为负值"],
+							"5px 10px" : ["当指定了两个 length 值时，第一个作用于横向间距，第二个作用于纵向间距"]
+						},
+						"width" : {"100%" : ""}
+					}
+				},
+				"caption-side" : {
+					"def" : "设置或检索表格( table )的 caption 对象是在表格的那一边。它是和 caption 对象一起使用的属性",
+					"ins" : [],
+					"cas" : "caption.html",
+					"att" : {
+						"caption-side" : {
+							"top" : ["默认值。 caption 在表格的上边"],
+							"right" : ["caption 在表格的右边"],
+							"bottom" : ["caption 在表格的下边"],
+							"left" : ["caption 在表格的左边"]
+						},
+						"height" : {"100px" : ""},
+						"border" : {"1px solid red" : ""}
+					}
+				}
+			}
+		},
+		"content" : {
+			"title" : "内容 GeneratedContent",
+			"tags" : {
+				"include-source" : {
+					"def" : "这个属性插入另一个文档到当前文档，取代当前对象的内容。插入文档的样式属性从当前对象继承",
+					"ins" : [],
+					"isN" : 1,
+					"cas" : "background.html",
+					"att" : {
+						"include-source" : {
+							"url(case/css/template.html)" : ["使用绝对或相对 url 地址指定插入文档。假如该文档不存在，当前对象的内容将被显示"]
+						},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"border" : {"1px solid red" : ""}
+					}
+				},
+				"quotes" : {
+					"def" : "设置或检索对象内使用的嵌套标记",
+					"ins" : [],
+					"isN" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"quotes" : {
+							"none" : ["默认值"],
+							"'\\201C' '\\201D'" : [
+								"用引号括起的嵌套标记定义。两个为一组。第一个 string 定义前标记（例：'<'），第二个 string 定义后标记（例：'>'）",
+								"组之间用空格格开。嵌套标记的应用深度按定义顺序内推"
+							]
+						},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"border" : {"1px solid red" : ""}
+					}
+				},
+				"content" : {
+					"def" : "content用于插入生成内容",
+					"ins" : ["与 :before 及 :after 伪元素配合使用，将生成内容放在一个元素内容的前面或后面"],
+					"isN" : 1,
+					"cas" : "background.html",
+					"att" : {
+						"content:after" : {
+							"attr(alt)" : ["使用对象的 alt 属性的文字"],
+							"counter(name)" : ["使用已命名的计数器 "],
+							"counter(name, list-style-type)" : ["使用已命名的计数器并遵从指定的 list-style-type 属性"],
+							"counters(name, string)" : ["使用所有已命名的计数器"],
+							"no-close-quote" : ["并不插入 quotes 属性的后标记。但增加其嵌套级别"],
+							"no-open-quote" : ["并不插入 quotes 属性的前标记。但减少其嵌套级别"],
+							"close-quote" : ["插入 quotes 属性的后标记"],
+							"open-quote" : ["插入 quotes 属性的前标记"],
+							"'这是 content 的内容'" : ["使用用引号括起的字符串"],
+							"url(case/images/logo.png)" : ["使用指定的绝对或相对 url 地址"],
+							"'paragraph' counter(paragraph)" : ["配合 counter-increment 使用"]
+						},
+						"counter-increment:after" : {
+							"title" : ["设定当一个选择符(selector)发生时计数器增加的值"],
+							"none" : ["默认值。阻止计数器增加"],
+							"paragraph" : ["定义一个将被增加计数的选择符(selector)，id，或者class。 number 定义增加的数值。可以为负值。默认值是 1"]
+						},
+						"counter-reset:after" : {
+							"title" : ["将指定选择符(selector)的计数器复位"],
+							"none" : ["默认值。阻止计数器复位"],
+							"paragraph" : ["定义一个将被增加计数的选择符(selector)，id，或者class。 number 定义增加的数值。可以为负值。默认值是 1"]
+						},
+						"color:after" : {"yellowgreen" : ""},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"border" : {"1px solid red" : ""}
+					}
+				}
+			}
+		},
+		"scrollbar" : {
+			"title" : "滚动条 Scrollbar",
+			"tags" : {
+				"scrollbar" : {
+					"def" : "设置滚动条样式",
+					"ins" : ["IE专用"],
+					"isN" : 1,
+					"cas" : "scrollbar.html",
+					"att" : {
+						"scrollbar-3dlight-color" : {
+							"title" : ["设置或检索滚动条亮边框颜色"],
+							"red" : ["指定颜色"]
+						},
+						"scrollbar-highlight-color" : {
+							"title" : ["设置或检索滚动条3D界面的亮边(ThreedHighlight)颜色"],
+							"blue" : ["指定颜色"]
+						},
+						"scrollbar-face-color" : {
+							"title" : ["设置或检索滚动条3D表面(ThreedFace)的颜色"],
+							"yellow" : ["指定颜色"]
+						},
+						"scrollbar-arrow-color" : {
+							"title" : ["设置或检索滚动条方向箭头的颜色。当滚动条出现但不可用时，此属性失效"],
+							"green" : ["指定颜色"]
+						},
+						"scrollbar-shadow-color" : {
+							"title" : ["设置或检索滚动条3D界面的暗边(ThreedShadow)颜色"],
+							"brown" : ["指定颜色"]
+						},
+						"scrollbar-darkshadow-color" : {
+							"title" : ["设置或检索滚动条暗边框(ThreedDarkShadow)颜色"],
+							"yellowgreen" : ["指定颜色"]
+						},
+						"scrollbar-base-color" : {
+							"title" : ["设置或检索滚动条基准颜色。其它界面颜色将据此自动调整"],
+							"pink" : ["指定颜色"]
+						},
+						"scrollbar-track-color" : {
+							"title" : ["设置或检索滚动条的拖动区域(TrackBar)颜色"],
+							"black" : ["指定颜色"]
+						},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""}
+					}
+				}
+			}
+		},
+		"a:hover" : {
+			"title" : "伪类",
+			"tags" : {
+				":hover|:link|:active|:visited" : {
+					"def" : "超链接伪类",
+					"ins" : [],
+					"cas" : "hover.html",
+					"att" : {
+						"color:link" : {
+							"green" : ["设置 a 对象在未被访问前的样式"]
+						},
+						"color:hover" : {
+							"red" : ["设置对象在其鼠标悬停时的样式"]
+						},
+						"text-decoration:hover" : {
+							"underline" : ""
+						},
+						"color:active" : {
+							"yellowgreen" : ["设置 a 对象在被用户激活(在鼠标点击与释放之间发生的事件)时的样式"]
+						},
+						"color:visited" : {
+							"blue" : ["设置 a 对象在其链接地址已被访问过时的样式"]
+						}
+					}
+				},
+				":first-child" : {
+					"def" : "设置 E 的第一个子对象的样式",
+					"ins" : [],
+					"cas" : "hover.html",
+					"att" : {
+						"color:first-child" : {
+							"red" : ""
+						},
+						"text-decoration:first-child" : {
+							"underline" : ""
+						}
+					}
+				},
+				":first-letter" : {
+					"def" : "设置对象内的第一个字符的样式",
+					"ins" : [],
+					"cas" : "hover.html",
+					"att" : {
+						"color:first-letter" : {
+							"red" : ""
+						},
+						"text-decoration:first-letter" : {
+							"underline" : ""
+						},
+						"display" : {"block" : "","inline-block":""}
+					}
+				},
+				":first-line" : {
+					"def" : "设置对象内的第一行的样式",
+					"ins" : [],
+					"cas" : "hover.html",
+					"att" : {
+						"color:first-line" : {
+							"red" : ""
+						},
+						"text-decoration:first-line" : {
+							"underline" : ""
+						},
+						"display" : {"block" : "","inline-block":""}
+					}
+				},
+				":after" : {
+					"def" : "用来和 content 属性一起使用，设置在对象后(依据对象树的逻辑结构)发生的内容",
+					"ins" : [],
+					"cas" : "hover.html",
+					"att" : {
+						"content:after" : {
+							"'字符串内容'" : ""
+						},
+						"color:after" : {
+							"yellowgreen" : ""
+						}
+					}
+				},
+				":before" : {
+					"def" : "用来和 content 属性一起使用，设置在对象后(依据对象树的逻辑结构)发生的内容",
+					"ins" : [],
+					"cas" : "hover.html",
+					"att" : {
+						"content:before" : {
+							"url(case/images/logo.png)" : ""
+						}
+					}
+				}
+			}
+		},
+		"box" : {
+			"title" : "用户界面 User-interface",
+			"tags" : {
+				"-css3-box-sizing" : {
+					"def" : "改变容器的盒模型组成方式",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "box-sizing.html",
+					"att" : {
+						"-css3-box-sizing" : {
+							"content-box" : ["此值维持css2.1盒模型的组成模式，border|padding|content {element width=border+padding+content}"],
+							"border-box" : ["此值改变css2.1盒模型组成模式，content|border|padding {element width=content} "],
+							"inherit" : ["默认继承"]
+						},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"border" : {"5px solid red" : "","10px solid red" : ""},
+						"padding" : {"20px" : "","50px" : ""}
+					}
+				},
+				"resize" : {
+					"def" : "使元素的区域可缩放，调节元素尺寸大小。适用于任意获得'overflow'条件的容器",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "resize.html",
+					"att" : {
+						"resize" : {
+							"none" : ["UserAgent没提供尺寸调整机制，用户不能操纵机制调节元素的尺寸"],
+							"both" : ["UserAgent提供双向尺寸调整机制，让用户可以调节元素的宽度和高度"],
+							"horizontal" : ["UserAgent提供单向水平尺寸调整机制，让用户可以调节元素的宽度"],
+							"vertical" : [" UserAgent提供单向垂直尺寸调整机制，让用户可以调节元素的高度"],
+							"inherit" : [" 默认继承"]
+						},
+						"overflow" : {"auto" : "","scroll" : ""},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"border" : {"2px solid red" : ""}
+					}
+				},
+				"nav-index" : {
+					"def" : "该属性为当前元素指定了其在当前文档中导航的序列号。导航的序列号指定了页面中元素通过键盘操作获得焦点的顺序。该属性可以存在于嵌套的页面元素当中",
+					"ins" : [
+						"这个属性是HTML4/XHTML1中属性'tabindex'的取代品，从HTML4引入并参考了HTML4的建议作了轻微的修改",
+						"输入设备默认四个方向键按html文档顺序顺序来控制元素的焦点切换，但为了更好的用户体验，User agents提供了自定义切换焦点的控制顺序方向。"
+					],
+					"isN" : 1,
+					"cas" : "nav-index.html",
+					"att" : {
+						"nav-index" : {
+							"auto" : ["User Agent默认的顺序"],
+							"1" : ["最先被导航"],
+							"2" : "",
+							"3" : "",
+							"4" : ["该数字（必须是正整数）指定了元素的导航顺序。'1'意味着最先被导航。当若干个元素的nav-index值相同时，则按照文档的先后顺序进行导航"],
+							"inherit" : [" 默认继承"]
+						},
+						"nav-up" : {
+							"auto" : ["User Agent默认的顺序"],
+							"target-name" : ["iframe 的 name 属性值"],
+							"root" : ["这个参数不能以'_'命名，指出frameset目标页面之间的元素焦点切换。如果指定的目标页面不存在，则被视为当前页面的焦点，意味着完全依赖框架页。该属性是以关键节点' root ' 标示，User agent将把整个frameset框架页定为目标"],
+							"#b1" : "",
+							"#b2" : "",
+							"#b3" : "",
+							"#b4" : ["要切换元素的id命名"]
+						},
+						"nav-right" : {"#b1" : "","#b2" : "","#b3" : "","#b4" : ""},
+						"nav-down" : {"#b1" : "","#b2" : "","#b3" : "","#b4" : ""},
+						"nav-left" : {"#b1" : "","#b2" : "","#b3" : "","#b4" : ""}
+					}
+				}
+			}
+		},
+		"classification" : {
+			"title" : "其它 Classification",
+			"tags" : {
+				"cursor" : {
+					"def" : "设置或检索在对象上移动的鼠标指针采用的光标形状",
+					"ins" : [],
+					"cas" : "template.html",
+					"att" : {
+						"cursor" : {
+							"auto" : ["默认值。浏览器根据当前情况自动确定鼠标光标类型。"],
+							"all-scroll" : ["有上下左右四个箭头，中间有一个圆点的光标。用于标示页面可以向上下左右任何方向滚动"],
+							"col-resize" : ["有左右两个箭头，中间由竖线分隔开的光标。用于标示项目或标题栏可以被水平改变尺寸"],
+							"crosshair" : ["简单的十字线光标"],
+							"default" : ["客户端平台的默认光标。通常是一个箭头"],
+							"hand" : ["竖起一只手指的手形光标。就像通常用户将光标移到超链接上时那样"],
+							"move" : ["十字箭头光标。用于标示对象可被移动"],
+							"help" : ["带有问号标记的箭头。用于标示有帮助信息存在"],
+							"no-drop" : ["带有一个被斜线贯穿的圆圈的手形光标。用于标示被拖起的对象不允许在光标的当前位置被放下"],
+							"not-allowed" : ["禁止标记(一个被斜线贯穿的圆圈)光标。用于标示请求的操作不允许被执行"],
+							"pointer" : ["和 hand 一样。竖起一只手指的手形光标。就像通常用户将光标移到超链接上时那样"],
+							"progress" : ["带有沙漏标记的箭头光标。用于标示一个进程正在后台运行"],
+							"row-resize" : ["有上下两个箭头，中间由横线分隔开的光标。用于标示项目或标题栏可以被垂直改变尺寸"],
+							"text" : ["用于标示可编辑的水平文本的光标。通常是大写字母 I 的形状"],
+							"vertical-text" : ["用于标示可编辑的垂直文本的光标。通常是大写字母 I 旋转90度的形状"],
+							"wait" : ["用于标示程序忙用户需要等待的光标。通常是沙漏或手表的形状"],
+							"w-resize" : "",
+							"s-resize" : "",
+							"n-resize" : "",
+							"e-resize" : "",
+							"ne-resize" : "",
+							"sw-resize" : "",
+							"se-resize" : "",
+							"nw-resize" : ["用于标示对象可被改变尺寸方向的箭头光标"],
+							"url(case/images/cursor.ani),url(case/images/default.cur),wait" : [""]
+						}
+					}
+				},
+				"zoom" : {
+					"def" : "设置或检索对象的缩放比例",
+					"ins" : ["设置或更改一个已被呈递的对象的此属性值将导致环绕对象的内容重新流动"],
+					"cas" : "template.html",
+					"att" : {
+						"zoom" : {
+							"normal" : ["默认值。使用对象的实际尺寸"],
+							"0.5" : ["百分数 | 无符号浮点实数。浮点实数值为1.0或百分数为100%时相当于此属性的 normal 值"]
+						}
+					}
+				},
+				"behavior" : {
+					"def" : "设置或检索对象的DHTML行为。多个行为之间用空格隔开",
+					"ins" : ["当多个附加到同一要素的行为发生冲突时，其结果确决于行为应用于要素的顺序。后一个行为的优先权高于前一个行为","IE 专用"],
+					"isN" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"behavior" : {
+							"url(css/PIE.htc)" : ["使用绝对或相对 url 地址指定DHTML行为组件（.htc）","兼容CSS3"],
+							"url(#objID)" : ["使用二进制实现(作为 ActiveX® 控件)的行为。此处的 #objID 为 object 对象的 id 属性值"],
+							"url(#default#behaviorName)" : ["IE的默认行为。由行为的名称标识( #behaviorName )指定"]
+						}
+					}
+				},
+				"filter" : {
+					"def" : "设置或检索对象所应用的滤镜或滤镜集合",
+					"ins" : ["IE 专用"],
+					"isN" : 0,
+					"cas" : "template.html",
+					"att" : {
+						"filter" : {
+							"alpha(opacity=50)" : ["设置透明度，相当于 opacity","要使用的滤镜效果。多个滤镜之间用空格隔开"]
+						}
+					}
+				},
+				"@import" : {
+					"def" : "导入 css 文件到 css 文件",
+					"ins" : [],
+					"cas" : "import.html",
+					"att" : {
+						"@import url(reset.css)" : {}
+					}
+				},
+				"@font-face" : {
+					"def" : "能够加载服务器端的字体文件，让客户端显示客户端所没有安装的字体",
+					"ins" : [
+						"IE 支持 .eot 格式",
+						"非IE 支持 .ttf｜.otf 格式"
+					],
+					"cas" : "font-face.html",
+					"att" : {
+						"font-family" : {"myFont" : ""},
+						"font-size" : {"40px" : "", "70px" : "", "100px" : ""},
+						"font-weight" : {"bold" : ""},
+						"font-style" : {"oblique" : ""},
+						"line-height" : {"100%" : "", "200%" : ""}
+					}
+				},
+				"@media" : {
+					"def" : "判断媒介(对象)类型来实现不同的展现。此特性让CSS可以更精确作用于不同的媒介类型，同一媒介的不同条件（分辨率、色数等等）",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "media.html"
+				},
+				"-css3-columns" : {
+					"def" : "分栏排版",
+					"ins" : ["webkit 内核浏览器专有"],
+					"isN" : 1,
+					"cas" : "columns.html",
+					"att" : {
+						"-css3-columns" : {
+							"title" : ["可以同时定义多栏的数目和每栏宽度"],
+							"300px 2" : "",
+							"300px 3" : "",
+							"300px 5" : ["column-width | column-count"]
+						},
+						"-css3-column-width" : {
+							"title" : ["可以定义每栏的宽度"],
+							"auto" : [" 取计算机值"],
+							"200px" : "",
+							"500px" : ["由浮点数字和单位标识符组成的长度值。不可为负值"]
+						},
+						"-css3-column-count" : {
+							"title" : ["可以定义栏目的数目"],
+							"auto" : [" 取计算机值"],
+							"3" : "",
+							"5" : ["整数。不可为负值"]
+						},
+						"-css3-column-span" : {
+							"title" : ["定义元素可以在栏目上定位显示"],
+							"1" : ["只在本栏中显示"],
+							"all" : ["横跨所有栏目并定位在栏目的Z轴之上"]
+						},
+						"-css3-column-rule" : {
+							"title" : ["定义每栏之间边框的宽度,样式和颜色"],
+							"3px dashed red" : ["width | style | color"]
+						},
+						"-css3-column-rule-width" : {
+							"title" : ["定义每栏之间边框的宽度"],
+							"5px" : "",
+							"10px" : ["由浮点数字和单位标识符组成的长度值。不可为负值"]
+						},
+						"-css3-column-rule-style" : {
+							"title" : ["定义每栏之间边框的颜色"],
+							"none" : ["默认值。无边框"],
+							"hidden" : ["隐藏边框"],
+							"solid" : ["实线边框"],
+							"dotted" : ["点线边框"],
+							"dashed" : ["虚线边框"],
+							"double" : ["双线边框"],
+							"groove" : ["根据 border-color 的值画3D凹槽"],
+							"ridge" : ["根据 border-color 的值画3D凹边"],
+							"inset" : ["根据 border-color 的值画3D凹边"],
+							"outset" : ["根据 border-color 的值画3D凸边"]
+						},
+						"-css3-column-rule-color" : {
+							"title" : ["定义每栏之间边框的颜色"],
+							"blue" : "",
+							"yellowgreen" : ["指定颜色"]
+						},
+						"-css3-column-gap" : {
+							"title" : ["定义两栏之间的间距距离"],
+							"normal" : ["normal的值为1em"],
+							"30px" : "",
+							"50px" : ["由浮点数字和单位标识符组成的长度值。不可为负值"]
+						},
+						"-css3-column-fill" : {
+							"title" : ["定义栏目的高度是否统一"],
+							"auto" : ["各栏目的高度随着其内容的多少而自动变化 "],
+							"balance " : ["各栏目的高度将会根据内容最多的那一栏的高度进行统一"]
+						},
+						"-css3-column-break-before" : {
+							"title" : ["定义元素之前是否断行"],
+							"auto" : "",
+							"always " : "",
+							"avoid" : ""
+						},
+						"-css3-column-break-after" : {
+							"title" : ["定义元素之后是否断行"],
+							"auto" : "",
+							"always " : "",
+							"avoid" : ""
+						}
+					}
+				}
+			}
+		},
+		"grouping" : {
+			"title" : "",
+			"tags" : {
+				"cursor" : {
+					"def" : "",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "template.html",
+					"att" : {
+						"cursor" : {
+							"" : [""],
+							"" : "",
+							"" : ""
+						}
+					}
+				}
+			}
+		}
+	}
+}

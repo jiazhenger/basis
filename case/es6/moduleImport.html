@@ -1,0 +1,22 @@
+<pre style="line-height:24px;font-size:14px;font-family:Arial;">
+	// ======================================================= es6 写法
+	export {v} from 'mod';
+	// ======================================================= es7 写法
+	export v from 'mod';
+	// ======================================================= 导入模块
+	import {firstName, lastName, year} from './profile';
+	// ======================================================= 为输入的变量重新取一个名字
+	import { lastName as surname } from './profile';
+	// ======================================================= 模块的整体加载
+	import * as circle from './circle';
+	// ======================================================= 默认(export default)输出，不需要大括号
+	import crc32 from 'crc32';
+	// ======================================================= 导入jq模块
+	import $ from 'jquery';
+	// ======================================================= 同时输入默认方法和其他变量
+	import customName, { otherMethod } from './export-default';
+</pre>
+
+<script type="module">
+	
+</script>

@@ -1,0 +1,17 @@
+<script type="module">
+	{
+		for (let val of '遍历字符串') {
+			document.write(`${val}<br></br>`);
+		}
+		
+		var text = String.fromCodePoint(0x20BB7);
+
+		for (let i = 0; i < text.length; i++) {
+			document.write(`${text[i]}<br></br>`);
+		}
+		
+		for (let i of text) {
+		   document.write(`${i}<br></br>`);
+		}
+	}
+</script>

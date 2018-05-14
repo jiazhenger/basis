@@ -1,0 +1,18 @@
+<pre class="jscode">
+	
+	{}.toString.call(a) === '[object Object]'						// 是否为对象
+	
+	{}.toString.call(a) === '[object Array]'						// 是否为数组
+										
+	{}.toString.call(a) === '[object Funciton]'						// 是否为函数
+										
+	Object.prototype.toString.call(a) === '[object Number]'			// 是否为数字
+										
+	Object.prototype.toString.call(a) === '[object String]'			// 是否为字符串
+										
+	Object.prototype.toString.call(a) === '[object Boolean]'		// 是否为布尔值
+	
+</pre>
+<script>
+	document.write({}.toString.call([]) === '[object Object]')
+</script>

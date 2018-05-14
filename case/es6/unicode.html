@@ -1,0 +1,11 @@
+<script type="module">
+	{
+		document.write(`unicode 字符：\u{20BB7}<br></br>`);
+		document.write(`表示超出\\u0000——\\uFFFF之间的字符：\u{41}\u{42}\u{43}<br></br>`);
+		
+		let hello = 123;
+		document.write(`hell\u{6F}<br></br>`);
+		
+		document.write(`${'\u{1F680}' === '\uD83D\uDE80'}<br></br>`);
+	}
+</script>

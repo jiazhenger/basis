@@ -1,0 +1,17 @@
+<script type="module">
+	{
+		document.write`123<br><br>`;
+			
+		let a = 10;
+		let b = 5;
+		
+		var tag = (a,b,c) => {
+			document.write`${a}<br><br>`;
+			document.write`${b}<br><br>`;
+			document.write`${c}<br><br>`;
+			return 'ok';
+		}
+		
+		tag`hello ${a+b} world ${a*b}`;
+	}
+</script>

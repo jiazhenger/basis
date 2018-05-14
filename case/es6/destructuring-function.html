@@ -1,0 +1,18 @@
+<script type="module">
+	{
+		// ==================================== 数组参数
+		function add([x,y]=[]){
+			return x+y;
+		}
+		
+		document.write(`数组参数计算x+y=：${add([10,20])}<br></br>`);
+		// ==================================== 对象参数
+		function move({x = 0, y = 0} = {}) {
+		  return [x, y];
+		}
+		document.write(`两个新参数：${move({x: 3, y: 8})}<br></br>`);
+		document.write(`一个新参数一个默认参数：${move({x: 3})}<br></br>`);
+		document.write(`参数为空对象：${move({})}<br></br>`);
+		document.write(`参数为为空：${move()}<br></br>`);
+	}
+</script>

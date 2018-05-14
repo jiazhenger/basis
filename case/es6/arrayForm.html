@@ -1,0 +1,21 @@
+<script type="module">
+	{
+		let arrayLike = {
+		    '0': 'a',
+		    '1': 'b',
+		    '2': 'c',
+		    length: 3
+		};
+		document.write(`ES5写法：${[].slice.call(arrayLike)}<br></br>`);
+		document.write(`ES6写法：${Array.from(arrayLike)}<br></br>`);
+		
+		let a = Array.from([1, 2, 3], x => x * x);
+		// 等同于
+		let b = Array.from([1, 2, 3]).map(x => x * x);
+		let c = Array.from([1, 2, 3], (x) => x * x);
+		
+		document.write(`${a}<br></br>`);
+		document.write(`${b}<br></br>`);
+		document.write(`${c}<br></br>`);
+	}
+</script>

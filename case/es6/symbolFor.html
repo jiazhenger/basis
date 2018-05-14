@@ -1,0 +1,12 @@
+<script type="module">
+	{
+		let obj = {};
+		let a = Symbol('a');
+		let b = Symbol.for('b');
+		
+		obj[a] = 'Hello';
+		obj[b] = 'World';
+		    
+		document.write(`返回 Symbol数组：${ Object.getOwnPropertySymbols(obj)}<br><br>`);
+	}
+</script>

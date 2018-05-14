@@ -1,0 +1,25 @@
+<script type="module">
+	{
+		foo::bar;
+		// 等同于
+		bar.bind(foo);
+	
+		foo::bar(...arguments);
+		// 等同于
+		bar.apply(foo, arguments);
+
+		onst hasOwnProperty = Object.prototype.hasOwnProperty;
+		function hasOwn(obj, key) {
+			return obj::hasOwnProperty(key);
+		}
+		
+		// 如果双冒号左边为空，右边是一个对象的方法，则等于将该方法绑定在该对象上面
+		var method = obj::obj.foo;
+		// 等同于
+		var method = ::obj.foo;
+		
+		let log = ::console.log;
+		// 等同于
+		var log = console.log.bind(console);
+			}
+</script>

@@ -1,0 +1,107 @@
+	<section class="frame-wrap">
+		<!---- 编辑器 ---->
+		<section editor="showHtml">
+			<div>
+				<article ng-show="!close.iframe">
+					<div class="wrap"><iframe ng-src="{{iframeSrc}}" id="showHtml" name="iframe" ng-if="isWrite"></iframe><i class="disabled-state" ng-if="!isWrite" ng-click="checkPerm()"></i></div>
+				</article>
+				<footer ng-show="!close.bottom">
+					<div class="wrap" ng-if="isWrite" ng-class="{split:obj.splitEditor}">
+						<textarea ng-show="editorModel.editor == 0 || obj.splitEditor" ng-model="editorContent.html" placeholder="html 编辑"></textarea>
+						<textarea ng-show="editorModel.editor == 1 || obj.splitEditor" ng-model="editorContent.css" placeholder="css 编辑"></textarea>
+						<textarea ng-show="editorModel.editor == 2 || obj.splitEditor" ng-model="editorContent.js" placeholder="javascript 编辑" id="jsScript"></textarea>
+					</div>
+					<i class="disabled-state" ng-if="!isWrite" ng-click="checkPerm()"></i>
+				</footer>
+				<nav ng-if="isWrite && !close.bottom">
+					<a class="btn-1-2" href="javascript:;" ng-class="{disabled:editorModel.editor!='0' && !obj.splitEditor}">
+						html
+						<label class="ng-label"><input type="radio" name="editor" ng-model="editorModel.editor" ng-value="0"></label>
+					</a>
+					<a class="btn-1-2" href="javascript:;" ng-class="{disabled:editorModel.editor!='1' && !obj.splitEditor}">
+						css
+						<label class="ng-label"><input type="radio" name="editor" ng-model="editorModel.editor" ng-value="1"></label>
+					</a>
+					<a class="btn-1-2" href="javascript:;" ng-class="{disabled:editorModel.editor!='2' && !obj.splitEditor}">
+						javascript
+						<label class="ng-label"><input type="radio" name="editor" ng-model="editorModel.editor" ng-value="2"></label>
+					</a>
+				</nav>
+			</div>
+		</section>
+		<!---- 代码列表 ---->
+		<aside ng-show="!close.aside" ng-if="isLogin">
+			<h2 ng-bind="title"></h2>
+			<menu>
+				<li ng-class="{current:elem[$index]}" ng-repeat="(key,val) in data track by $index">
+					<h3>{{val.title}}<label class="ng-label"><input type="checkbox" ng-model="elem[$index]" ng-value=""></label></h3>
+					<dl ng-show="elem[$index]">
+						<dd ng-class="{isHtml5:$p.is5,isNoUse:$p.isN,current:radio.value==index}" ng-repeat="(index,$p) in val.tags track by $index">
+							<b class="radio"><i></i></b>
+							<span ng-bind="index"></span>
+							<label class="ng-label"><input type="radio" name="tags" ng-model="radio.value" ng-value="index" ng-change="tagsChange(key,index)"></label>
+						</dd>
+					</dl>
+				</li>
+			</menu>
+		</aside>
+		<!---- 详细 ---->
+		<div class="ins-wrap" ng-if="obj.inswrap" ng-class="{ins2:openDetailWay && !close.aside}">
+			<a href="javascript:;" class="close-btn"><label class="ng-label"><input type="checkbox" ng-model="obj.inswrap"></label></a>
+			<h2 ng-bind="$tit"></h2>
+			<article>
+				<header ng-if="$tags.def"><h6>定义：</h6><p ng-bind="$tags.def"></p></header>
+				<dl class="ins" ng-if="$tags.ins.length > 0">
+					<dd ng-repeat="$d in $tags.ins track by $index" ng-bind-html="$d"></dd>
+				</dl>
+				<dl class="txt-promt" ng-if="$tags.pro">
+					<dt>重要提示：</dt>
+					<dd ng-repeat="$m in $tags.pro track by $index" ng-bind-html="$m"></dd>
+				</dl>
+				<nav class="wrap-btn">
+					<a class="btn-1-2" href="javascript:;" ng-class="{disabled:!isCase || !isWrite}" ng-click="practice($tags,$tit,title)">练习案例</a>
+				</nav>
+				<ul class="attr-list" ng-if="isAttrList && $tags.att">
+					<li ng-repeat="(key,val) in $tags.att track by $index" ng-class="{noCurrent:val === ''}">
+						<h3 ng-class="{current:attrName[key]}">
+							<b class="checkbox"><i></i></b><span ng-bind="key"></span>
+							<label class="ng-label"><input type="checkbox" ng-model="attrName[key]" ng-value="key"></label>
+						</h3>
+						<dl class="attr-pro" ng-if="!attrName[key] && val.title">
+							<dd ng-repeat="tit in val.title" ng-bind="tit"></dd>
+						</dl>
+						<div ng-if="attrName[key]">
+							<div ng-repeat="(index,data) in val track by $index" ng-if="val.title !== data">
+								<h3 ng-if="page !== 'js'" class="val" ng-class="{current:attrValue[key]==index}">
+									<b class="radio"><i></i></b><span ng-bind="index"></span>
+									<label class="ng-label"><input type="radio" name="{{attrValue[key]}}" ng-model="attrValue[key]" ng-value="index" ng-change="attrChange(key,index)"></label>
+								</h3>
+								<dl>
+									<dd ng-repeat="$g in data" ng-bind="$g"></dd>
+								</dl>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</article>
+		</div>
+	</section>
+	<nav class="close-nav" ng-if="isWrite">
+		<label class="t-l" ng-class="{cur:isShowNav}"><input class="ng-input" type="checkbox" ng-model="isShowNav"></label>
+		<span ng-show="isShowNav">
+			<i ng-class="{current:obj.splitEditor}">split editor<label class="ng-label"><input type="checkbox" ng-model="obj.splitEditor"></label></i>
+			
+			<i ng-class="{current:close.bottom}">editor<label class="ng-label"><input type="checkbox" ng-model="close.bottom"></label></i>
+			<i ng-class="{current:close.iframe}">view<label class="ng-label"><input type="checkbox" ng-model="close.iframe"></label></i>
+			<i ng-class="{current:close.aside}">nav<label class="ng-label"><input type="checkbox" ng-model="close.aside"></label></i>
+			
+			<i ng-class="{current:obj.resetEditor}">reset editor<label class="ng-label" ng-hide="obj.resetEditor" ng-click="resetEditor()"><input type="checkbox" ng-model="obj.resetEditor"></label></i>
+			
+			<i ng-class="{current:clear.all}">clear all<label class="ng-label" ng-hide="clear.all"><input type="checkbox" ng-model="clear.all"></label></i>
+			<i ng-class="{current:clear.html}">clear html<label class="ng-label" ng-hide="clear.html"><input type="checkbox" ng-model="clear.html"></label></i>
+			<i ng-class="{current:clear.css}">clear css<label class="ng-label" ng-hide="clear.css"><input type="checkbox" ng-model="clear.css"></label></i>
+			<i ng-class="{current:clear.js}">clear js<label class="ng-label" ng-hide="clear.js"><input type="checkbox" ng-model="clear.js"></label></i>
+			
+			<i ng-class="{current:obj.runJscript}">javascript run<label class="ng-label" ng-hide="obj.runJscript"><input type="checkbox" ng-model="obj.runJscript"></label></i>
+		</span>
+	</nav>

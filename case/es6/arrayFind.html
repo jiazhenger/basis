@@ -1,0 +1,9 @@
+<script type="module">
+	{
+		document.write(`用于找出第一个符合条件的数组成员：${[1, 4, -5, 10].find((n) => n < 0)}<br></br>`);
+		document.write(`用于找出第一个符合条件的数组成员：${[1, 5, 10, 15].find((value,index,arr) => value > 2)}<br></br>`);
+		
+		document.write(`用于找出第一个符合条件的数组成员的索引值：${[1, 4, -5, 10].findIndex((n) => n < 0)}<br></br>`);
+		document.write(`用于找出第一个符合条件的数组成员的索引值：${[1, 5, 10, 15].findIndex((value,index,arr) => value > 2)}<br></br>`);
+	}
+</script>

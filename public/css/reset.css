@@ -1,0 +1,20 @@
+/* ============================================================ reset  ============================================================ */
+/*
+body{
+	font:16px/20px Microsoft YaHei;
+	color:#000;
+	word-wrap:break-all;
+}
+*/
+/*
+@font-face{
+    src:url('../../case/images/font/maobi.ttf') format('truetype');
+    font-family:myFont;
+}
+body{
+	font:bold 30px/150% myFont;
+	color:#000;
+}*/
+.import{font:30px/40px Microsoft YaHei;color:yellowgreen;}
+
+.jscode{font:16px/18px Arial;color:#c00}

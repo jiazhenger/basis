@@ -1,0 +1,291 @@
+﻿{
+	"title" : "javascript 基础教案",
+	"data" : {
+		"base" : {
+			"title" : "javascript 介绍",
+			"tags" : {
+				"什么是javascript" : {
+					"def" : "JavaScript 一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言,内置支持类型",
+					"ins" : [
+						"它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能",
+						"为了取得技术优势，微软推出了JScript，CEnvi推出ScriptEase，与JavaScript同样可在浏览器上运行。为了统一规格，因为JavaScript兼容于ECMA标准，因此也称为ECMAScript"
+					]
+				},
+				"三个组成部分" : {
+					"ins" : [
+						"ECMAScript，描述了该语言的语法和基本对象",
+						"文档对象模型（DOM），描述处理网页内容的方法和接口",
+						"浏览器对象模型（BOM），描述与浏览器进行交互的方法和接口"
+					]
+				},
+				"基本特点" : {
+					"pro" : [
+						"JavaScript是一种属于网络的脚本语言,已经被广泛用于Web应用开发,常用来为网页添加各式各样的动态功能,为用户提供更流畅美观的浏览效果。通常JavaScript脚本是通过嵌入在HTML中来实现自身的功能的",
+						"Javascript脚本语言同其他语言一样，有它自身的基本数据类型，表达式和算术运算符及程序的基本程序框架。Javascript提供了四种基本的数据类型和两种特殊数据类型用来处理数据和文字。而变量提供存放信息的地方，表达式则可以完成较复杂的信息处理"
+					],
+					"ins" : [
+						"是一种解释性脚本语言（代码不进行预编译）",
+						"主要用来向HTML（标准通用标记语言下的一个应用）页面添加交互行为",
+						"可以直接嵌入HTML页面，但写成单独的js文件有利于结构和行为的分离",
+						"跨平台特性，在绝大多数浏览器的支持下，可以在多种平台下运行（如Windows、Linux、Mac、Android、iOS等）"
+					]
+				},
+				"特性" : {
+					"ins" : [
+						"<span class='cb'>脚本语言</span>。JavaScript是一种解释型的脚本语言,C、C++等语言先编译后执行,而JavaScript是在程序的运行过程中逐行进行解释。",
+						"<span class='cb'>基于对象</span>。JavaScript是一种基于对象的脚本语言,它不仅可以创建对象,也能使用现有的对象",
+						"<span class='cb'>简单</span>。JavaScript语言中采用的是弱类型的变量类型,对使用的数据类型未做出严格的要求,是基于Java基本语句和控制的脚本语言,其设计简单紧凑",
+						"<span class='cb'>动态性</span>。JavaScript是一种采用事件驱动的脚本语言,它不需要经过Web服务器就可以对用户的输入做出响应。在访问一个网页时,鼠标在网页中进行鼠标点击或上下移、窗口移动等操作JavaScript都可直接对这些事件给出相应的响应",
+						"<span class='cb'>跨平台性</span>。JavaScript脚本语言不依赖于操作系统,仅需要浏览器的支持。因此一个JavaScript脚本在编写后可以带到任意机器上使用,前提上机器上的浏览器支 持JavaScript脚本语言,目前JavaScript已被大多数的浏览器所支持"
+					],
+					"pro" : [
+						"不同于服务器端脚本语言，例如PHP与ASP，JavaScript主要被作为客户端脚本语言在用户的浏览器上运行，不需要服务器的支持。所以在早期程序员比较青睐于JavaScript以减少对服务器的负担，而与此同时也带来另一个问题：安全性",
+						"而随着服务器的强壮，虽然程序员更喜欢运行于服务端的脚本以保证安全，但JavaScript仍然以其跨平台、容易上手等优势大行其道。同时，有些特殊功能（如AJAX）必须依赖Javascript在客户端进行支持。随着引擎如V8和框架如Node.js的发展，及其事件驱动及异步IO等特性，JavaScript逐渐被用来编写服务器端程序"
+					]
+				}
+			}
+		},
+		"test" : {
+			"title" : "javascript 调试工具",
+			"tags" : {
+				"alert()" : {
+					"def" : "用于显示带有一条指定消息和一个 OK 按钮的警告框",
+					"ins" : [],
+					"att" : {
+						"alert(message)" : {
+							"" : ["参数可以是任何数据类型"]
+						}
+					}
+				},
+				"console" : {
+					"def" : "控制台（console）是Firebug的第一个面板，也是最重要的面板，主要作用是显示网页加载过程中产生各类信息",
+					"cas" : "console.html",
+					"att" : {
+						"console.log(message)" : {
+							"1" : ["控制台输出信息，通用","参数可以是任何数据类型"]
+						},
+						"console.info('一般信息')" : {
+							"1" : ["一般信息"]
+						},
+						"console.debug('出错信息')" : {
+							"1" : ["出错信息"]
+						},
+						"console.warn('警告提示')" : {
+							"1" : ["警告提示"]
+						},
+						"console.error('错误提示')" : {
+							"" : ["错误提示","throw new Error() 产生的效果相同，使用该语句时会向浏览器抛出一个 js 异常"]
+						},
+						"console.asser('1 === 1')" : {
+							"" : ["断言，测试一条表达式是否为真，不为真时将抛出异常（断言失败）"]
+						},
+						"console.dir(wondow)" : {
+							"" : ["输出一个对象的全部属性（输出结果类似于 DOM 面板中的样式）"]
+						},
+						"console.dirxml(html)" : {
+							"" : ["输出一个 HTML 或者 XML 元素的结构树，点击结构树上面的节点进入到 HTML 面板"]
+						},
+						"console.trace()" : {
+							"" : ["输出 Javascript 执行时的堆栈追踪"]
+						},
+						"console.group(object)" : {
+							"" : ["输出消息的同时打开一个嵌套块，用以缩进输出的内容。调用 console.groupEnd() 用以结束这个块的输出"]
+						},
+						"console.groupCollapsed()" : {
+							"" : ["同 console.group(); 区别在于嵌套块默认是收起的"]
+						},
+						"console.time(name)" : {
+							"" : ["计时器，计时开始，当调用 console.timeEnd(name);并传递相同的 name 为参数时，计时停止，并输出执行两条语句之间代码所消耗的时间（毫秒）"]
+						},
+						"console.timeEnd(name)" : {
+							"" : ["计时器，计时停止，并输出执行与console.time(name)之间代码所消耗的时间（毫秒）"]
+						},
+						"console.profile()" : {
+							"" : ["与 profileEnd() 结合使用，用来做性能测试，与 console 面板上 profile 按钮的功能完全相同"]
+						},
+						"console.count()" : {
+							"" : ["输出该行代码被执行的次数，参数 title 将在输出时作为输出结果的前缀使用"]
+						},
+						"console.clear()" : {
+							"" : ["清空控制台"]
+						},
+						"特殊用法" : {
+							"" : ["console.log('message%c','color:red')"]
+						}
+					}
+				},
+				"document.write()" : {
+					"def" : "简单地打印指定的文本内容到页面上",
+					"cas" : "write.html",
+					"att" : {
+						"document.write(message)" : {
+							"" : ["参数可以是任何数据类型","可接受任何多个参数"]
+						},
+						"document.writeln(message)" : {
+							"" : ["作用相同，外加可在每个表达式后写一个换行符"]
+						}
+					}
+				}
+			}
+		},
+		"dataType" : {
+			"title" : "6 大数据类型",
+			"tags" : {
+				"类型介绍" : {
+					"def" : "6 种数据类型",
+					"ins" : [
+						"简单数据类型  5 种： <span class='cb'>undefined, null, boolean, number, string</span>",
+						"复杂数据类型 1 种：<span class='cb'>object</span>"
+					]
+				},
+				"Undefined" : {
+					"def" : "这个值表示变量不含有值，即未定义",
+					"ins" : [
+						"typeof undefined 返回也是 undefined",
+						"在使用var声明变量，但未对其加以初始化时，这个变量的类型就是undefined，且其默认初始化值为undefined",
+						"对未声明与初始化的变量，直接使用，那么这个变量的类型也是undefined，但是没有默认初始化值"
+					]
+				},
+				"Null" : {
+					"def" : "默认值是null，从逻辑角度讲，是表示一个空对象指针",
+					"ins" : [
+						"可以通过将变量的值设置为 null 来清空变量",
+						"typeof(null)返回 object，但 null 并非 object，具有 null 值的变量也并非 object"
+					]
+				},
+				"Boolean" : {
+					"def" : "真与假,true 或  false"
+				},
+				"Number" : {
+					"def" : "默认值是null，从逻辑角度讲，是表示一个空对象指针",
+					"ins" : [
+						"数字，包括整数和浮点数，NaN",
+						"NaN：任何涉及NaN的操作都会返回NaN，NaN值与任何值都不相等，包括本身",
+						"无引号包围"
+					],
+					"att" : {
+						"isNaN(param)" : {
+							"" : ["判断数据是否为 NaN","返回 ture 或 false"]
+						}
+					}
+				},
+				"String" : {
+					"def" : "字符串，必须有引号包围"
+				},
+				"Object" : {
+					"def" : "对象的类型，除了简单数据类型之外的所有数据类型",
+					"ins" : ["<span class='cb'>function,array,object</span>","本质是一组无序的键值对组成的"]
+				}
+			}
+		},
+		"dataJudge" : {
+			"title" : "判断数据类型集合",
+			"tags" : {
+				"typeof" : {
+					"def" : "返回数据类型",
+					"cas" : "typeof.html",
+					"ins" : [
+						"解决大部分的数据类型判断",
+						"一元运算，放在一个运算值之前，其返回值为一个字符串，该字符串说明运算数的类型"
+					],
+					"att" : {
+						"typeof(param)" : {},
+						"typeof param" : {}
+					}
+				},
+				"instanceof" : {
+					"def" : "判断一个变量是否某个对象的实例",
+					"cas" : "instanceof.html",
+					"ins" : [
+						"是一个三目运算式---和typeof最实质上的区别"
+					],
+					"att" : {
+						"a instanceof Object" : {}
+					}
+				},
+				"constructor" : {
+					"def" : "判断数据类型",
+					"cas" : "constructor.html",
+					"ins" : ["获取的类型与对比的类型有些不一致"],
+					"att" : {
+						"a.constructor == Object" : {}
+					}
+				},
+				"toString.call()" : {
+					"def" : "判断数据类型",
+					"ins" : ["{}可用  Object.prototype 替换"],
+					"cas" : "toStringCall.html",
+					"att" : {
+						"{}.toString.call(o)" : {},
+						"Object.prototype.toString.call(o)" : {}
+					}
+				}
+			}
+		},
+		"statements" : {
+			"title" : "语句",
+			"tags" : {
+				"if 条件语句" : {
+					"def" : "简单地打印指定的文本内容到页面上",
+					"att" : {
+						"" : {}
+					}
+				},
+				"switch 条件语句" : {
+					"def" : "简单地打印指定的文本内容到页面上",
+					"att" : {
+						"" : {}
+					}
+				},
+				"do-while 循环语句" : {
+					"def" : "简单地打印指定的文本内容到页面上",
+					"att" : {
+						"" : {}
+					}
+				},
+				"while 循环语句" : {
+					"def" : "简单地打印指定的文本内容到页面上",
+					"att" : {
+						"" : {}
+					}
+				},
+				"for 循环语句" : {
+					"def" : "简单地打印指定的文本内容到页面上",
+					"att" : {
+						"" : {}
+					}
+				},
+				"for in 循环语句" : {
+					"def" : "简单地打印指定的文本内容到页面上",
+					"att" : {
+						"" : {}
+					}
+				},
+				"label 标签语句" : {
+					"def" : "简单地打印指定的文本内容到页面上",
+					"att" : {
+						"" : {}
+					}
+				},
+				"with 简化语句" : {
+					"def" : "简单地打印指定的文本内容到页面上",
+					"att" : {
+						"" : {}
+					}
+				}
+			}
+		},
+		"aaaa" : {
+			"title" : "",
+			"tags" : {
+				"undefined" : {
+					"def" : "简单地打印指定的文本内容到页面上",
+					"cas" : "write.html",
+					"att" : {
+						"" : {}
+					}
+				}
+			}
+		}
+	}
+}

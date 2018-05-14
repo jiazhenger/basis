@@ -1,0 +1,18 @@
+<script type="module">
+	{
+		document.write(`检查一个数值是否非无穷：${Number.isFinite(15)}<br></br>`);
+		document.write(`检查一个值是否为NaN：${Number.isNaN(NaN)}<br></br>`);
+		
+		document.write(`将字符串转换为整数：${Number.parseInt('12.34')}<br></br>`);
+		document.write(`将字符串转换为浮点数：${Number.parseFloat('123.45#')}<br></br>`);
+		
+		document.write(`判断一个值是否为整数：${Number.isInteger(25)}<br></br>`);
+		
+		document.write(`为浮点数计算，设置一个误差范围：${5.551115123125783e-17 < Number.EPSILON}<br></br>`);
+		
+		document.write(`范围的上限：${Number.MAX_SAFE_INTEGER === Math.pow(2, 53) - 1}<br></br>`);
+		document.write(`范围的下限：${Number.MIN_SAFE_INTEGER  === -Number.MAX_SAFE_INTEGER}<br></br>`);
+		
+		document.write(`判断一个整数是否落在这个范围之内：${Number.isSafeInteger(9007199254740990)}<br></br>`);
+	}
+</script>

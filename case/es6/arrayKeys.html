@@ -1,0 +1,15 @@
+<script type="module">
+	{
+		for (let index of ['a', 'b'].keys()) {
+			document.write(`返回键名：${index}<br></br>`);
+		}
+		
+		for (let index of ['a', 'b'].values()) {
+			document.write(`返回键值：${index}<br></br>`);
+		}
+		
+		for (let [index, elem] of ['a', 'b'].entries()) {
+			document.write(`返回键值对：${index} : ${elem}<br></br>`);
+		}
+	}
+</script>

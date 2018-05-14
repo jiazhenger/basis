@@ -1,0 +1,8 @@
+<script type="module">
+	{
+		document.write(`将3号位复制到0号位：${[1, 2, 3, 4, 5].copyWithin(0, 3, 4)}<br></br>`);
+		
+		const i32a = new Int32Array([1, 2, 3, 4, 5]);
+		document.write(`将2号位到数组结束，复制到0号：${i32a.copyWithin(0, 2)}<br></br>`);
+	}
+</script>

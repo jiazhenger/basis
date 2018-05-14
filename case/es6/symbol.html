@@ -1,0 +1,13 @@
+<script type="module">
+	{
+		let s = Symbol();
+
+		document.write(`第7种数据类型：${typeof s}<br><br>`);
+		
+		var s1 = Symbol('foo');
+		var s2 = Symbol('bar');
+		
+		document.write(`带参数的Symbol：${s1.toString()}<br><br>`);
+		document.write(`带参数的Symbol：${s2.toString()}<br><br>`);
+	}
+</script>

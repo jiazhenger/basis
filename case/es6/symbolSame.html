@@ -1,0 +1,8 @@
+<script type="module">
+	{
+		document.write(`设置同一个 Symbol：${Symbol.for('foo') === Symbol.for('foo')}<br><br>`);
+		
+		let s1 = Symbol.for('same Symbol');
+		document.write(`返回一个已登记的Symbol类型值的key：${Symbol.keyFor(s1)}<br><br>`);
+	}
+</script>

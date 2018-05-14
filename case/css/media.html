@@ -1,0 +1,25 @@
+<style>
+	.template{color:black;}
+	@media only screen and (max-width:600px){				
+		.template{color:red;}
+	}
+	@media screen and (min-width:600px) and (max-width:1000px){			
+		.template{color:blueviolet;}
+	}
+	@media only screen and (min-width:1000px){
+		.template{color:blue;}
+	}
+	/* 设备宽 + 设备高 + 设备独立像素 /与分辨率有关 + 横屏 */
+	@media only screen and (device-width:320px) and (device-height:320px) and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape){			
+		.template{}
+	}
+	/* 横屏 */						
+	@media only screen and (orientation:landscape) {	
+		.template{}
+	}
+	/* 竖屏 */				
+	@media only screen and (orientation:portrait){	
+		.template{}
+	}
+</style>
+<div class="template">青火网络诚邀您来学习，在这里你可以轻松的学到你想要的前端知识</div>

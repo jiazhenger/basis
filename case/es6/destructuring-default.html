@@ -1,0 +1,56 @@
+<script type="module">
+	{
+		// =========================== 变量的默认值
+		let [a='解构默认值'] = []
+		let [b='必须严格等于undefined'] = [undefined]
+		
+		function f(){
+			return '函数返回值';
+		}
+		
+		let [c=f()] = []
+		
+		document.write(`变量的默认值：${a}<br></br>`);
+		document.write(`变量的默认值：${b}<br></br>`);
+		
+		document.write(`默认值为函数：${c}<br></br>`);
+		
+		// =========================== 函数的参数为变量的默认值
+		function foo(x=1,y=2){
+			return x+y;
+		}
+		document.write(`函数的默认值：${foo()}<br></br>`);
+		
+		// =========================== 函数的参数为数组的默认值
+		function fooArr([x='=号赋值',y='ok'] = []){
+			return x+y;
+		}
+		document.write(`函数的参数为数组的默认值：${fooArr()}<br></br>`);
+		
+		function fooArr2([x,y] = ['解构赋值','ok']){
+			return x+y;
+		}
+		document.write(`函数的参数为数组的默认值：${fooArr2()}<br></br>`);
+		
+		// =========================== 函数的参数为对象的默认值
+		function fooObj({x='=号赋值',y='ok'} = {}){
+			return x+y;
+		}
+		document.write(`函数的参数为对象的默认值：${fooObj()}<br></br>`);
+		
+		function fooObj2({x,y} = {x:'解构赋值',y:'ok'}){
+			return x+y;
+		}
+		document.write(`函数的参数为对象的默认值：${fooObj2()}<br></br>`);
+		
+		// =========================== 数组的默认值
+		let [x=1,y=x] = [];
+		document.write(`变量的默认值x：${x}<br></br>`);
+		document.write(`变量的默认值y：${y}<br></br>`);
+		
+		let [m=n,n=1] = [];
+		document.write(`变量的默认值m不存在（JS顺序执行导致）：${m}<br></br>`);
+		document.write(`变量的默认值n：${n}<br></br>`);
+		
+	}
+</script>

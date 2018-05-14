@@ -1,0 +1,21 @@
+<script type="module">
+	{
+		let mySymbol = Symbol();
+
+		// 第一种写法
+		let a = {};
+		a[mySymbol] = 'Hello!';
+		document.write(`第一种写法：${a[mySymbol]}<br><br>`);
+		
+		// 第二种写法
+		let b = {
+		  [mySymbol]: 'Hello!'
+		};
+		document.write(`第二种写法：${b[mySymbol]}<br><br>`);
+		
+		// 第三种写法
+		let c = {}
+		Object.defineProperty(c, mySymbol, { value: 'Hello!' });
+		document.write(`第三种写法：${c[mySymbol]}<br><br>`);
+	}
+</script>

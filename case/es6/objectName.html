@@ -1,0 +1,16 @@
+<script type="module">
+	{
+		const person = {
+			sayName() {
+				return this.name;
+			},
+			get firstName() {
+				return 'Nicholas';
+			}
+		};
+		
+		document.write(`返回一般函数的 name：${person.sayName.name}<br><br>`);
+		
+		document.write(`返回取值函数 get 的 name：${person.firstName.name}<br><br>`);
+	}
+</script>

@@ -1,0 +1,138 @@
+﻿/* ================================ *** 个性化模块 *** ================================ */
+// ======================================================================== index.less
+// -------------------------------- 导航
+.nav-wrap{.w;
+	li:extend(.flexbox all){.tc;.w}
+	a:extend(.flex-1,.hover-o all,.disabled,.f40px){.hh(100/@e40);.ml(1);.b;.i;.ar;.nowrap;
+		&:first-child{.ml;}
+		&.current{.bc_ca;.cp;.c_fff}
+	}
+}
+// -------------------------------- 进入权限
+.permissions{.m(@20px 2%);
+	ul{}
+	li:extend(.flexbox all){.mb(@20px);}
+	h6:extend(.f22px){.w(10%);.hh(62/@e22);.nowrap;.min_w(100/@e22);.tr;.mr(2%);
+		i:extend(.vh){}
+	}
+	.tbox:extend(.flex-1){}
+}
+// ======================================================================== 框架结构
+.frame-wrap:extend(.flexbox all,.wh,.f24px){
+	>section:extend(.flex-1){.bc_eee;.h;
+		>div:extend(.flex-v){}
+		article:extend(.flex-1,.rel){.bor(@ca,2);.rbor0;.oh;height:50%\9;
+			iframe:extend(.wh,.bc_fff){}
+		}
+		footer:extend(.rel,.flex-1){.bor(@ca,2);.rbor0;.tbor0;.oh;height:42%\9;
+			textarea:extend(.bc_fff){.wh;.p(10/@e24);.fs(16);.c(@cb);.lh(180%);.ls(2);.db;.oys;}
+			.split:extend(.flexbox){
+				textarea:extend(.flex-1){.wh(auto);.lbor(@ca);
+					&:first-child{.lbor0;}
+				}
+			}
+		}
+		nav:extend(.flexbox all,.bc_fff){
+			a:extend(.rel,.flex-1){.fs(40/@e24);.hh(60/@e40);.border-radius(0);.ml(1);.i;.ar;.b;.text-shadow(0 0 2px #999);
+				&:first-child{.ml;}
+			}
+		}
+	}
+	.wrap{.p_abs_lt;.r_b;}
+	>aside{.bor(@ca,2);.oys;.min_w(350/@e24);border-top:0\9;border-bottom:0\9;}
+	h2:extend(.omit){.fs(26/@e24);.tc;.hh(60/@e26);.bbor(@ca,2);.plr(3%);}
+	menu{
+		li{.bbor(@ca);
+			&.current{
+				h2{.bc(@ca);.c_fff;}
+				dl{.db;}
+			}
+		}
+		h3:extend(.rel){.fs(22/@e22);.hh(60/@e22);.plr(3%);.cp;.tr;.c(#1177e0);}
+		dl{.tbor(@ca);}
+		dd:extend(.rel,.hover-o all,.flexbox all){.cp;.hh(50/@e24);.bbor_ddd;.plr(3%);.mlr(3%);
+			&:last-child{.bbor0;}
+			&.current{.c(@ca);
+				b{.bor_c(@ca);}
+				i{.bc(@ca);}
+			}
+			span:extend(.flex-1,.omit){}
+			
+		}
+	}
+}
+.isHtml5{.c(@cb);}
+.isNoUse{.c_aaa;}
+.disabled-state:extend(.brn_bsc){.bi_ww(200/@e24,disabled);.abs_mc;.m_tl(200/@e24*@x);.cp;}
+.radio:extend(.r0px){.fl;.ww(20/@e24);.bor(#aaa,3/@e24);.rel_m;.mt(26/@e24*@x);.mr(20/@e24);
+	i:extend(.r0px){.ww(6/@e24);.bc(#aaa);.abs_mc;.m_tl(6/@e24*@x);}
+}
+// -------------------------------- 介绍及属性选择
+.ins-wrap:extend(.bc_fff){.w(25%);.oys;.lbor(@ca,2);
+	article{.mlr(2%);.p_tb(10/@e24,20/@e24);
+		header:extend(.flexbox){
+			>p:extend(.flex-1){.c(@cb);.mb(15/@e24);}
+		}
+	}
+	dd{.mt(10/@e16);.list(decimal outside);
+		&:first-child{.mt;}
+	}
+	.wrap-btn{.mt(50/@e24);
+		a{.mb(20/@e24);}
+	}
+	&.ins2{.bor(@ca,2);.lbor0;}
+}
+.ins{.fs(16/@e24);.ml(30/@e16);
+	dd{.lh(180%);}
+}
+.txt-promt{.mt(20/@e24);
+	dt{.fs(20/@e24);.c(#0b61b9);}
+	dd{.fs(16/@e24);.ml(40/@e16);.lh(180%);}
+}
+.close-btn:extend(.brn_bsc,.r0px){.p_abs_rt(10/@e24);.bi_ww(40/@e24,close-btn);.bc_fff;}
+// -------------------------------- 控制器
+.close-nav:extend(.f24px,.flexbox all){.fix_rb(10/@e24,1,100);.tc;.transition(all 0.5s ease);
+	*:extend(.rel){}
+	span:extend(.flexbox all,.bc_fff){.ml(10/@e24);
+		>i:extend(.r3px,.hover-o all){.hh(60/@e24);.mlr(5/@e24);.db;.c_fff;.rgba(51,203,253,0.8);.plr(15/@e24);.cd;.nowrap;
+			&.current{.rgba(0,0,0,0.5);}
+			&:first-child{.ml;}
+			&:last-child{.mr;}
+		}
+	}
+}
+.t-l:extend(.triangle){@w:30/@e24;.bls;.blc(@cb);.bor_w(@w 0 @w @w);.fs(1em);.fl;
+	&.cur{.brs;.blsd;.brc(@cb);.bor_w(@w @w @w 0);}
+	input{.vh}
+}
+// -------------------------------- 属性列表
+.attr-list{.pb(200/@e24);
+	>li{.mt(25/@e24);
+		&:first-child{.mt;}
+		>div{.ml(35/@e24);}
+	}
+	h3:extend(.flexbox all,.rel){.lh(26/@e24);
+		span:extend(.flex-1){}
+		&.current{
+			b{.bor_c(@cb);}
+			i{.db;}
+			.radio{
+				i{.bc(@cb);}
+			}
+		}
+		&.val{.mt(20/@e24);}
+	}
+	.radio{.m_tr(0,10/@e24);.t;}
+	dl{.fs(20/@e24);.m_tl(10/@e16,30/@e16);.lh(150%);.c(#666);}
+	dd{.list(disc outside);}
+	.attr-pro{
+		dd{.list(circle outside);}
+	}
+}
+.checkbox:extend(.rel,.r3px){.fl;.ww(20/@e24);.bor(#aaa,3/@e24);.mr(10/@e24);
+	i:extend(.brn_bsc){.bi_wh(18/@e24,14/@e24,ico-check);.abs_mc;.m_tl(14/@e24*@x,18/@e24*@x);.dn;}
+}
+
+.brower-promt{.fs(40*@px);.tc;.lh(200%);.fix_lt(3%,25%);.r(3%);
+	span{.c_f00;}
+}

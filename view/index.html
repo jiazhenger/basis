@@ -1,0 +1,31 @@
+	<!------- 导航栏 ------->
+	<menu class="nav-wrap">
+		<li>
+			<a href="javascript:;" ng-repeat="(key,val) in nav" ng-class="{current:val}" ng-bind="key" rel="{{val}}" ng-click="goStudy(key,val)"></a>
+		</li>
+	</menu>
+	
+	<!------- 权限配置  ------->
+	<section class="permissions">
+		<form name="myForm" ng-submit="submitForm(myForm.$valid)" novalidate>
+			<ul>
+				<li>
+					<h6>用户名：</h6>
+					<input class="tbox" type="text" placeholder="your user name" readonly
+						ng-model="user.name" 
+						ng-disabled="isSuccess"
+						required>
+				</li>
+				<li>
+					<h6>密<i>占</i>码：</h6>
+					<input class="tbox" type="password" placeholder="your password" readonly
+						ng-model="user.pwd" 
+						ng-disabled="isSuccess" 
+						required>
+				</li>
+				<li><h6>&nbsp;</h6><div class="flex-1"><input class="btn-1" type="submit" ng-value="sTxt || '开始学习'" ng-disabled="isSuccess"></div></li>
+			</ul>
+		</form>
+	</section>
+	
+	

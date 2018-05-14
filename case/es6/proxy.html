@@ -1,0 +1,13 @@
+<script type="module">
+	{
+		let proxy = new Proxy({}, {
+			get: function(target, property) {
+				return 35;
+			}
+		});
+	
+		document.write(`所以访问任何属性都得到35：${proxy.time}<br></br>`);
+		document.write(`所以访问任何属性都得到35：${proxy.name}<br></br>`);
+		document.write(`所以访问任何属性都得到35：${proxy.title}<br></br>`);
+	}
+</script>

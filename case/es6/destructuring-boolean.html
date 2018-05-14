@@ -1,0 +1,9 @@
+<script type="module">
+	{
+		let {toString: s} = 123
+		let {toString: x} = true
+		
+		document.write(`将变量123转换成数字，并赋值给 s：${s === Number.prototype.toString}<br></br>`);
+		document.write(`将变量true转换成数字，并赋值给 x：${x === Boolean.prototype.toString}<br></br>`);
+	}
+</script>

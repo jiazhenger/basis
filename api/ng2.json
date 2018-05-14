@@ -1,0 +1,675 @@
+﻿{
+	"title" : "css3 教案",
+	"data" : {
+		"transition" : {
+			"title" : "过渡 transition",
+			"tags" : {
+				"transition" : {
+					"def" : "过渡设置",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "background.html",
+					"att" : {
+						"-css3-transition" : {
+							"title" : ["复合属性"],
+							"all 2s 1s linear" : ["property | durationTime | delayTime | 效果"],
+							"width 2s ease" : ""
+						},
+						"-css3-transition-property" : {
+							"title" : ["定义要过渡的属性"],
+							"all" : ["过渡所有属性"],
+							"background-color" : ["只过渡背景颜色"]
+						},
+						"-css3-transition-duration" : {
+							"title" : ["定义要过渡所需的时间"],
+							"0" : ["如果为0，单位需省略，否则可能会出现不兼容问题"],
+							".5s" : ""
+						},
+						"-css3-transition-delay" : {
+							"title" : ["定义延迟过渡播放时间"],
+							"0" : ["如果为0，单位需省略，否则可能会出现不兼容问题"],
+							".5s" : ""
+						},
+						"-css3-transition-timing-function" : {
+							"title" : ["定义过度动画的效果"],
+							"linear" : ["匀速"],
+							"ease" : ["逐渐变慢"],
+							"ease-in" : ["加速"],
+							"ease-out" : ["减速"],
+							"ease-in-out" : ["加速然后减速"],
+							"cubic-bezier" : ["自定义时间曲线）[x1,y1,x2,y2]，值在[0,1] 内"]
+						},
+						"background-color:hover" : {"yellowgreen" : ""},
+						"width:hover" : {"800px" : ""},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"border" : {"2px solid red" : ""}
+					}
+				}
+			}
+		},
+		"transform" : {
+			"title" : "变形 transform",
+			"tags" : {
+				"transform" : {
+					"def" : "变形设置",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "transform.html",
+					"att" : {
+						"-css3-transform" : {
+							"title" : ["复合属性"],
+							
+							"rotate(45deg)" : ["旋转"],
+							"rotateX(180deg)" : ["x轴旋转"],
+							"rotateY(180deg)" : ["y轴旋转"],
+							"rotateZ(45deg)" : ["z轴旋转"],
+							
+							"scale(1,2)" : ["x,y轴缩放"],
+							"scaleX(2)" : ["x轴缩放"],
+							"scaleY(2.5)" : ["y轴缩放"],
+							
+							"translate(10px,10px)" : ["x,y轴位移"],
+							"translateX(20px)" : ["x轴位移"],
+							"translateY(30px)" : ["x轴位移"],
+							
+							"skew(20deg,20deg)" : ["x,y轴变形"],
+							"skewX(20deg)" : ["x轴变形"],
+							"skewY(20deg)" : ["y轴变形"],
+							
+							"matrix(1,2,3,4,5,6))" : ["矩阵轴变形"],
+							
+							"rotate(45deg) scale(0.9,1.2) translate(100px,50px) skew(10deg,10deg)" : ""
+						},
+						"-css3-transform-origin" : {
+							"title" : ["变形原点"],
+							"center center" : "",
+							"top right" : "",
+							"bottom right" : "",
+							"top left" : "",
+							"bottom left" : ""
+						},
+						"-css3-perspective-origin" : {
+							"title" : ["透视原点，仅用于 3D"],
+							"center center" : "",
+							"top right" : "",
+							"bottom right" : "",
+							"top left" : "",
+							"bottom left" : ""
+						},
+						"-css3-backface-visibility" : {
+							"title" : ["隐藏内容的背景：旋转的时候背景不可见"],
+							"visible" : "",
+							"hidden" : ""
+						},
+						"-css3-transform-style" : {
+							"title" : ["使被转换的子元素保留其 3D 转换"],
+							"flat" : ["子元素将不保留其 3D 位置"],
+							"preserve-3d" : ["保留3D空间"]
+							
+						},
+						"background-color" : {"yellowgreen" : ""},
+						"width" : {"200px" : ""},
+						"height" : {"200px" : ""},
+						"border" : {"2px solid red" : ""}
+					}
+				}
+			}
+		},
+		"animation" : {
+			"title" : "动画 animation",
+			"tags" : {
+				"animation" : {
+					"def" : "动画设置",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "animation.html",
+					"att" : {
+						"-css3-animation" : {
+							"title" : ["复合属性"],
+							"animate1 2s linear both" : "",
+							"animate2 2s linear infinite both" : ""
+						},
+						"-css3-animation-name" : {
+							"title" : ["动画名称"],
+							"animate2" : ""
+						},
+						"-css3-animation-duration" : {
+							"title" : ["定义动画播放一次需要的时间"],
+							"1s" : "",
+							"3s" : "",
+							"5s" : ""
+						},
+						"-css3-animation-delay" : {
+							"title" : ["定义动画延迟播放时间"],
+							"1s" : "",
+							"2s" : ""
+						},
+						"-css3-animation-timing-function" : {
+							"title" : ["过度效果"],
+							"linear" : ["匀速"],
+							"ease" : ["逐渐变慢"],
+							"ease-in" : ["加速"],
+							"ease-out" : ["减速"],
+							"ease-in-out" : ["加速然后减速"],
+							"cubic-bezier" : ["自定义时间曲线）[x1,y1,x2,y2]，值在[0,1] 内"]
+						},
+						"-css3-animation-iteration-count" : {
+							"title" : ["定义循环次数"],
+							"1" : ["默认一次"],
+							"infinite" : ["为无限次 "]
+						},
+						"-css3-animation-direction" : {
+							"title" : ["定义动画播放的方向"],
+							"normal" : ["默认，每次循环都向前播放"],
+							"alternate" : ["第偶数次向前播放，第奇数次向反方向播放 "]
+						},
+						"-css3-animation-play-state" : {
+							"title" : ["动画播放状态，可以配合 js 控制动画的播放状态"],
+							"running" : ["播放"],
+							"paused" : ["停止"]
+						},
+						"-css3-animation-fill-mode" : {
+							"title" : ["定义动画播放完后的状态"],
+							"none" : ["当动画完成后，不保留任何动画之中的样式"],
+							"backwards" : ["保留动画开始时的状态，一般在 keyframes 中的 0%"],
+							"forwards" : ["保留动画播放结束时的样式，一般在 keyframes 中的 100%"],
+							"both" : ["保留开始和结束时的状态"]
+						},
+						"font-size" : {"50px" : "", "80px" : ""},
+						"line-height" : {"200%" : ""},
+						"border" : {"2px solid red" : ""}
+					}
+				}
+			}
+		},
+		"flexbox" : {
+			"title" : "弹性布局  flexbox",
+			"tags" : {
+				"display:flex" : {
+					"def" : "定义一个可弹性布局的盒子",
+					"ins" : [
+						"任何一个容器都可以指定为Flex布局",
+						"采用Flex布局的元素，称为Flex容器（flex container），简称'容器'",
+						"它的所有子元素自动成为容器成员，称为Flex项目（flex item），简称'项目'"
+					],
+					"is5" : 1,
+					"cas" : "flex.html",
+					"att" : {
+						"display" : {
+							"-moz-flex" : "",
+							"-webkit-flex" : "",
+							"flex" : ""
+						},
+						"-css3-flex-direction" : {
+							"title" : ["决定主轴的方向（即项目的排列方向）"],
+							"row" : ["默认值，主轴为水平方向，起点在左端"],
+							"row-reverse" : ["主轴为水平方向，起点在右端"],
+							"column" : ["主轴为垂直方向，起点在上沿"],
+							"column-reverse" : ["主轴为垂直方向，起点在下沿"]
+						},
+						"-css3-flex-wrap" : {
+							"title" : ["定义如果一条轴线排不下，如何换行"],
+							"nowrap" : ["默认值，不换行"],
+							"wrap" : ["主换行，第一行在上方"],
+							"wrap-reverse" : ["换行，第一行在下方"]
+						},
+						"-css3-flex-flow" : {
+							"title" : ["是flex-direction属性和flex-wrap属性的简写形式"],
+							"row nowrap" : ["默认值，flex-direction | flex-wrap"],
+							"row-reverse wrap" : ""
+						},
+						"-css3-justify-content" : {
+							"title" : ["父容器里面子容器的水平对齐方式"],
+							"flex-start" : ["居左对齐，默认值"],
+							"flex-end" : ["居右对齐"],
+							"center" : ["居中对"],
+							"space-between" : ["两端对齐，项目之间的间隔都相等"],
+							"space-around" : ["每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍"]
+						},
+						"-css3-align-items" : {
+							"title" : ["父容器里面子容器的垂直对齐方式"],
+							"stretch" : ["默认值，拉伸，拉伸到与父容器等高"],
+							"flex-start" : ["居顶对齐"],
+							"flex-end" : ["居底对齐"],
+							"center" : ["居中对齐"],
+							"baseline" : ["项目的第一行文字的基线对齐"]
+						},
+						"-css3-align-content" : {
+							"title" : ["定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用"],
+							"stretch" : ["默认值，如果项目未设置高度或设为auto，将占满整个容器的高度"],
+							"flex-start" : ["交叉轴的起点对齐"],
+							"flex-end" : ["交叉轴的终点对齐"],
+							"center" : ["交叉轴的中点对齐"],
+							"space-between" : ["与交叉轴两端对齐，轴线之间的间隔平均分布"],
+							"space-around" : ["每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍"]
+						},
+						"overflow" : {"hidden" : ""},
+						"height" : {"300px" : ""},
+						"border" : {"2px solid red" : ""}
+					}
+				},
+				"flex" : {
+					"def" : "用于设置 flexbox 的子元素",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "display-flex.html",
+					"att" : {
+						"-css3-flex" : {
+							"title" : [
+								"是flex-grow, flex-shrink 和 flex-basis的简写",
+								"后两个属性可选",
+								"建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值"
+							],
+							"none" : ["在任何情况都不会发生伸缩"],
+							"initial" : ["在有剩余空间的情况下不会有任何变化，但是在必要的情况下会被收缩"],
+							"auto" : ["会根据主轴自动伸缩以占用所有剩余空间，非常类似于普通流中的自动外边距"],
+							"0 1 auto" : ["默认值"],
+							"auto" : "1 1 auto",
+							"none" : "0 0 auto",
+							"1" : "",
+							"2" : "",
+							"0 2 300px" : ""
+						},
+						"-css3-flex-grow" : {
+							"title" : ["定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大"],
+							"0" : ["默认值"],
+							"1" : "",
+							"2" : ""
+						},
+						"-css3-flex-shrink" : {
+							"title" : ["定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小","负值对该属性无效"],
+							"1" : ["默认值"],
+							"2" : ""
+						},
+						"-css3-flex-basis" : {
+							"title" : [
+								"定义了在分配多余空间之前，项目占据的主轴空间（main size）",
+								"浏览器根据这个属性，计算主轴是否有多余空间",
+								"它的默认值为auto，即项目的本来大小"
+							],
+							"auto" : ["默认值"],
+							"100px" : "",
+							"300px" : ""
+						},
+						"-css3-order" : {
+							"title" : ["定义项目的排列顺序","数值越小，排列越靠前，默认为0","用于子元素上"],
+							"0" : ["默认值"],
+							"1" : "",
+							"2" : ""
+						},
+						"-css3-align-self" : {
+							"title" : [
+								"允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性",
+								"表示继承父元素的align-items属性，如果没有父元素，则等同于stretch"
+							],
+							"auto" : ["默认值"],
+							"stretch" : ["如果项目未设置高度或设为auto，将占满整个容器的高度"],
+							"flex-start" : ["交叉轴的起点对齐"],
+							"flex-end" : ["交叉轴的终点对齐"],
+							"center" : ["交叉轴的中点对齐"],
+							"baseline" : ["项目的第一行文字的基线对齐"]
+						},
+						"height" : {"300px" : ""},
+						"border" : {"2px solid red" : ""}
+					}
+				},
+				"display:box" : {
+					"def" : "与 display:flex 作用一样",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "flex.html",
+					"att" : {
+						"display" : {
+							"-moz-box" : "",
+							"-webkit-box" : "",
+							"box" : ""
+						},
+						"-css3-box-orient" : {
+							"horizontal" : ["水平排列"],
+							"inline-axis" : ["将子容器水平排列"],
+							"vertical" : ["垂直排列"],
+							"block-axis" : ["垂直排列"],
+							"inherit" : ""
+						},
+						"-css3-box-direction" : {
+							"title" : ["用来确定父容器里的子容器排列顺序"],
+							"normal" : ["默认值"],
+							"reverse" : ["反转排列"],
+							"inherit" : ""
+						},
+						"-css3-box-pack" : {
+							"title" : ["父容器里面子容器的水平对齐方式，相当于 justify-content"],
+							"start" : ["居顶左齐"],
+							"end": ["居右对齐"],
+							"center" : ["居中对齐"],
+							"justify" : ["水平等分父容器宽度"]
+						},
+						"-css3-box-align" : {
+							"title" : ["父容器里面子容器的垂直对齐方式，相当于 align-items"],
+							"start" : ["居顶对齐"],
+							"end": ["居底对齐"],
+							"center" : ["居中对齐"],
+							"stretch" : ["拉伸，拉伸到与父容器等高"],
+							"baseline" : ["项目的第一行文字的基线对齐"]
+						},
+						"height" : {"300px" : ""},
+						"border" : {"2px solid red" : ""}
+					}
+				},
+				"-css3-box-flex" : {
+					"def" : "与 flex 作用一样",
+					"ins" : ["设为Flex布局以后，子元素的float、clear和vertical-align属性将失效"],
+					"is5" : 1,
+					"cas" : "display-box-flex.html",
+					"att" : {
+						"-css3-box-flex" : {
+							"1.0" : "",
+							"2.0" : ""
+						},
+						"display" : {"block" : ""}
+					}
+				},
+				"display:inline-flex" : {
+					"def" : "行内元素使用Flex布局",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "inline-flex.html",
+					"att" : {
+						"display" : {
+							"-moz-inline-flex" : "",
+							"-webkit-inline-flex" : "",
+							"inline-flex" : ""
+						}
+					}
+				}
+			}
+		},
+		"selector1" : {
+			"title" : "通用选择器 selector",
+			"tags" : {
+				"*{ }" : {
+					"def" : "通配选择符",
+					"ins" : ["选定文档目录树(DOM)中的所有类型的单一对象"],
+					"cas" : "selector.html",
+					"att" : {
+						"*{ }" : { }
+					}
+				},
+				"E{ }" : {
+					"def" : "类型选择符/元素选择符",
+					"ins" : ["以文档语言对象(Element)类型作为选择符","即以 html 标签作为选择符"],
+					"cas" : "selector.html",
+					"att" : {
+						"div" : {"title" : ["<div></div>"]}
+					}
+				},
+				"E.className{ }" : {
+					"def" : "类选择符",
+					"ins" : ["以 .class 形式作为选择符"],
+					"cas" : "selector.html",
+					"att" : {
+						".className{ }" : "",
+						"div.className{ }" : "",
+						".test.className{ }" : {"title" : ["<div class='test'></div>"]},
+						"#test.className{ }" : {
+							"title" : [
+								"<div id='test' class='test'></div>",
+								"包含限制关系","前面包含后面","前面限制后面"
+							]
+						}
+					}
+				},
+				"#ID{ }" : {
+					"def" : "ID选择符",
+					"ins" : ["以 #id 形式作为选择符"],
+					"cas" : "selector.html",
+					"att" : {
+						"#id{ }" : {"title" : ["<div id='test'></div>"]}
+					}
+				},
+				"E[attr]{ }" : {
+					"def" : "属性选择符",
+					"ins" : [],
+					"cas" : "selector.html",
+					"att" : {
+						"[attr]{ } == *[attr]{ }" : {"title" : ["<div attr></div>","选择具有 attr 属性的 所有元素"]},
+						"E[attr]{ }" : {"title" : ["<div attr></div>","选择具有 attr 属性的 E"]},
+						"E[attr='val']{ }" : {"title" : ["<div attr='#'></div>","选择具有 attr 属性且属性值等于 val 的 E"]},
+						"E[attr~='val']{ }" : {"title" : ["<div attr='# $ %'></div>","选择具有 attr 属性且属性值为一用空格分隔的字词列表，其中一个等于 val 的 E"]},
+						"E[attr|='val']{ }" : {"title" : ["<div attr='#-$-%'></div>","选择具有 attr 属性且属性值为一用连字符分隔的字词列表，由 val 开始的 E"]},
+						
+						"E[attr^='val']{ }" : {"title" : ["<div attr='$#%#'></div>","选匹配具有 attr 属性、且值以 val 开头的 E 元素"]},
+						"E[attr$='val']{ }" : {"title" : ["<div attr='$#%#'></div>","匹配具有 attr 属性、且值以 val 结尾的 E 元素"]},
+						"E[attr*='val']{ }" : {"title" : ["<div attr='$#%#'></div>","匹配具有 att 属性、且值中含有val的 E 元素"]},
+						
+						"input[type='text']" : {},
+						"input[type='password']" : {},
+						"input[type='submit']" : {}
+					}
+				},
+				"E1 E2{ }" : {
+					"def" : "包含选择符",
+					"ins" : ["选择所有被 E1 包含的 E2 "],
+					"cas" : "selector.html",
+					"att" : {
+						"ul li{ }" : {"title" : ["<ul><li></li></ul>"]},
+						"div.test span" : {"title" : ["<div class='test'><span></span></div>"]}
+					}
+				},
+				"E1 > E2{ }" : {
+					"def" : "子对象选择符",
+					"ins" : ["选择所有作为 E1 子对象的 E2"],
+					"cas" : "selector.html",
+					"att" : {
+						"ul > li > span{ }" : {"title" : ["<ul><li><span></span></li></ul>"]}
+					}
+				},
+				"E1,E2,E3{ }" : {
+					"def" : "选择符分组",
+					"ins" : ["将同样的定义应用于多个选择符，可以将选择符以逗号分隔的方式并为组"],
+					"cas" : "selector.html",
+					"att" : {
+						"div,p,span" : {"title" : ["<div></div><p></p><span></span>"]},
+						"#id,.class{ }" : {"title" : ["<div id='test'></div><p class='test'></p>"]}
+					}
+				},
+				"E:Pseudo-Classes{ }" : {
+					"def" : "伪类选择符",
+					"ins" : [],
+					"cas" : "selector.html",
+					"att" : {
+						"E:link{ }" : { },
+						"E:hover{ }" : { },
+						"E:active{ }" : { },
+						"E:visited{ }" : { },
+						"E:focus{ }" : {"title" : ["仅于用表单"]},
+						"E:first-first{ }" : {"title" : ["指向元素在父级中的第一个子节点"]}
+					}
+				},
+				"E:PPseudo-Elements{ }" : {
+					"def" : "伪对象选择符",
+					"ins" : [],
+					"cas" : "selector.html",
+					"att" : {
+						"E:first-letter{ }" : {"title" : ["设置对象内的第一个字符的样式"]},
+						"E:first-line{ }" : {"title" : ["设置对象内的第一行的样式","设置在父级，指向于子级"]},
+						"E:before{ }" : {"title" : ["用来和 content 属性一起使用，设置在对象前(依据对象树的逻辑结构)发生的内容"]},
+						"E:after{ }" : {"title" : ["用来和 content 属性一起使用，设置在对象后(依据对象树的逻辑结构)发生的内容"]}
+					}
+				}
+			}
+		},
+		"selector2" : {
+			"title" : "css3选择器 selector",
+			"tags" : {
+				"E:root{ } " : {
+					"def" : "匹配文档的根元素。在HTML中，根元素永远是HTML",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"html:root{ }" : {"title" : ["样式不可继承，只能针对本身设置样式"]}
+					}
+				},
+				"E + F | E ~ F{ }" : {
+					"def" : "匹配兄弟节点",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"div + p{ }" : {"title" : ["匹配紧挨 E 元素之后的 F 元素","只匹配一个元素"]},
+						"div ~ p{ }" : {"title" : ["匹配 E 元素之后的 F 元素","只要在 E 之后的 F 元素都会生效","匹配多个","<div></div><p></p>"]}
+					}
+				},
+				"E:nth-child(n){ } " : {
+					"def" : "匹配父元素中的第 n 个子元素 E",
+					"ins" : [
+						"以阶乘算法计算位置",
+						"位置按父级中的所有元素计算",
+						"如果第 n 个元素与 E 不一样时，样式不会起作用"
+					],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"E:nth-child(n){ }" : {"title" : ["全部"]},
+						"E:nth-child(1){ }" : {"title" : ["第  1 个"]},
+						"E:nth-child(2n){ }" : {"title" : ["第偶数个"]},
+						"E:nth-child(2n-1){ }" : {},
+						"E:nth-child(2n+1){ }" : {"title" : ["第奇数个"]},
+						"E:nth-child(3n+1){ }" : {"title" : ["自定义计算位置"]}
+					}
+				},
+				"E:nth-last-child(n){ } " : {
+					"def" : "匹配父元素中的倒数第 n 个结构子元素 E",
+					"ins" : ["计算位置同 E:nth-child(n){ }"],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"E:nth-last-child(n){ }" : {"title" : ["全部"]},
+						"E:nth-last-child(1){ }" : {"title" : ["倒数第  1 个"]},
+						"E:nth-last-child(2n){ }" : {"title" : ["第偶数个"]},
+						"E:nth-last-child(2n-1){ }" : {},
+						"E:nth-last-child(2n+1){ }" : {"title" : ["第奇数个"]},
+						"E:nth-last-child(3n+1){ }" : {"title" : ["自定义计算位置"]}
+					}
+				},
+				"E:nth-of-type(n){ } " : {
+					"def" : "匹配同类型中的第 n 个同级兄弟元素 E",
+					"ins" : ["位置按兄弟元素来计算"],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"E:nth-of-type(n){ }" : {"title" : ["全部"]},
+						"E:nth-of-type(1){ }" : {"title" : ["第  1 个"]},
+						"E:nth-of-type(2n){ }" : {"title" : ["第偶数个"]},
+						"E:nth-of-type(2n-1){ }" : {},
+						"E:nth-of-type(2n+1){ }" : {"title" : ["第奇数个"]},
+						"E:nth-of-type(3n+1){ }" : {"title" : ["自定义计算位置"]}
+					}
+				},
+				"E:nth-last-of-type(n){ } " : {
+					"def" : "匹配同类型中的倒数第 n 个同级兄弟元素 E",
+					"ins" : ["计算位置同 E:nth-of-type(n){ }"],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"E:nth-last-child(n){ }" : {"title" : ["全部"]},
+						"E:nth-last-child(1){ }" : {"title" : ["倒数第  1 个"]},
+						"E:nth-last-child(2n){ }" : {"title" : ["第偶数个"]},
+						"E:nth-last-child(2n-1){ }" : {},
+						"E:nth-last-child(2n+1){ }" : {"title" : ["第奇数个"]},
+						"E:nth-last-child(3n+1){ }" : {"title" : ["自定义计算位置"]}
+					}
+				},
+				"E:last-child{ } " : {
+					"def" : "匹配父元素中最后一个 E 元素",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"E:last-child{ }" : {},
+						"E:first-child{ }" : {}
+					}
+				},
+				"E:first-of-type{ } " : {
+					"def" : "匹配同级兄弟元素中的第一个 E 元素",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"E:first-of-type{ }" : {}
+					}
+				},
+				"E:only-child{ } " : {
+					"def" : "匹配属于父元素中唯一子元素的 E",
+					"ins" : ["父元素中，只有一个子元素"],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"E:only-child{ }" : {}
+					}
+				},
+				"E:only-of-type{ } " : {
+					"def" : "匹配属于同类型中唯一兄弟元素的 E",
+					"ins" : ["被操作的子元素在父元素中，有且只有一个"],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"E:only-of-type{ }" : {}
+					}
+				},
+				"E:empty{ } " : {
+					"def" : "匹配没有任何子元素的元素 E",
+					"ins" : ["包括 text 节点","即什么都没有"],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"E:empty{ }" : {}
+					}
+				},
+				"E:checked/enabled/disabled{} " : {
+					"def" : "匹配表单元素",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"E:checked{ }" : {"title" : ["匹配所有用户界面（form表单）中处于选中状态的元素E","适用于 checkbox、radio 表单元素"]},
+						"E:enabled{ }" : {"title" : ["匹配所有用户界面（form表单）中处于可用状态的E元素","适用于所有表单元素"]},
+						"E:disabled{ }" : {"title" : ["匹配所有用户界面（form表单）中处于不可用状态的E元素","<input type='radio' checked><input type='checkbox' checked>"]}
+					}
+				},
+				"E:not(s){ } " : {
+					"def" : "匹配所有不匹配简单选择符 s 的元素 E",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"E:not(div/.class/#id){ }" : {}
+					}
+				},
+				"E:target{ } " : {
+					"def" : "匹配相关URL指向的 E 元素",
+					"ins" : [
+						"E 必须是 id",
+						"提示：在地址栏的url后面输入 #xxx，可以看到样式","刷新浏览器不起作用，需要用 enter 键启动"
+					],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"#id:target{ }" : {"title" : ["<div id='mustId'></div>","地址栏输入：index.html#mustId"]}
+					}
+				},
+				"E::selection{ } " : {
+					"def" : "匹配 E 元素中被用户选中或处于高亮状态的部分",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "selector.html",
+					"att" : {
+						"E::selection{ }" : {}
+					}
+				}
+			}
+		}
+	}
+}

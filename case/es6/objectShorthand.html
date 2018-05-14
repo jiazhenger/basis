@@ -1,0 +1,22 @@
+<script type="module">
+	{
+		const foo = 'bar';
+		const baz = {foo};
+		
+		document.write(`属性简写：${JSON.stringify(baz)}<br><br>`);
+		
+		function f(x, y) {
+			return {x, y};
+		}
+		
+		document.write(`属性简写：${JSON.stringify(f(1,2))}<br><br>`);
+		
+		let o = {
+			method() {
+				return "Hello!";
+			}
+		}
+		
+		document.write(`方法简写：${o.method()}<br><br>`);
+	}
+</script>

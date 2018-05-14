@@ -1,0 +1,1546 @@
+﻿{
+	"title" : "html 教案",
+	"data" : {
+		"structure" : {
+			"title" : "结构元素",
+			"tags" : {
+				"header" : {
+					"def" : "定义 section 或 document 的页眉",
+					"ins" : [],
+					"is5" : 1
+				},
+				"main" : {
+					"def" : "定义document中body的主要内容",
+					"ins" : ["一个页面只能有一个 main，而且只能包含在 body 中"],
+					"is5" : 1
+				},
+				"footer" : {
+					"def" : "定义 section 或 document 的页脚",
+					"ins" : ["典型的，它会包含创作者的姓名、文档的创作日期以及联系信息"],
+					"is5" : 1
+				},
+				"section" : {
+					"def" : "定义文档中的节",
+					"ins" : ["比如：章节、页眉、页脚或文档中的其他部分"],
+					"is5" : 1
+				},
+				"article" : {
+					"def" : "一个特殊的 section 标签",
+					"ins" : [
+						"它比 section 具有更明确的语义, 它代表一个独立的、完整的相关内容块",
+						"一般来说， article 会有标题部分(通常包含在 header 内)，有时也会 包含 footer",
+						"虽然 section 也是带有主题性的一块内容，但是无论从结构上还是内容上来说，article 本身就是独立的、完整的",
+						"比如是来自一个外部的新闻提供者的一篇新的文章，或者来自 blog 的文本，或者是来自论坛的文本。亦或是来自其他外部源内容",
+						"当 article 内嵌 article 时，原则上来说，内部的 article 的内容是和外层的 article 内容是相关的。例如，一篇博客文章中，包含用户提交的评论的 article 就应该在包含博客文章 article 之中"
+					],
+					"is5" : 1
+				},
+				"aside" : {
+					"def" : "定义页面内容之外的内容",
+					"ins" : ["article 以外的内容。aside 的内容应该与 article 的内容相关。其内容可用作文档的侧栏"],
+					"is5" : 1
+				},
+				"nav" : {
+					"def" : "定义导航链接",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "nav.html"
+				},
+				"hgroup" : {
+					"def" : "用于对网页或区段（section）的标题进行组合",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "hgroup.html"
+				},
+				"h1~h6" : {
+					"def" : "定义标题",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "h1-h6.html"
+				},
+				"address" : {
+					"def" : "定义地址元素",
+					"ins" : [],
+					"is5" : 0
+				}
+			}
+		},
+		"grouping" : {
+			"title" : "分组内部元素",
+			"tags" : {
+				"figure" : {
+					"def" : "用于对元素进行组合",
+					"ins" : [
+						"标签规定独立的流内容（图像、图表、照片、代码等）",
+						"figure 元素的内容应该与主内容相关，但如果被删除，则不应对文档流产生影响"
+					],
+					"is5" : 1,
+					"cas" : "figure.html"
+				},
+				"figcaption" : {
+					"def" : "定义 figure 元素的标题（caption）",
+					"ins" : ["'figcaption' 元素应该被置于 'figure' 元素的第一个或最后一个子元素的位置"],
+					"is5" : 1,
+					"cas" : "figure.html"
+				},
+				"div" : {
+					"def" : "定义文档中的一个部分",
+					"ins" : [],
+					"is5" : 0
+				},
+				"p" : {
+					"def" : "定义段落",
+					"ins" : [],
+					"is5" : 0
+				},
+				"ul" : {
+					"def" : "定义无序列表",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "ul-li.html"
+				},
+				"ol" : {
+					"def" : "定义有序列表",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "ol-li.html"
+				},
+				"li" : {
+					"def" : "定义列表的项目",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "li.html"
+				},
+				"dl" : {
+					"def" : "定义定义列表",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "dl-dt-dd.html"
+				},
+				"dt" : {
+					"def" : "定义定义的项目",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "dl-dt-dd.html"
+				},
+				"dd" : {
+					"def" : "定义定义的描述",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "dl-dt-dd.html"
+				},
+				"blockquote" : {
+					"def" : "定义长的引用",
+					"ins" : [],
+					"is5" : 0
+				},
+				"br" : {
+					"def" : "插入换行符",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "br.html"
+				},
+				"hr" : {
+					"def" : "定义水平线",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "hr.html"
+				},
+				"pre" : {
+					"def" : "定义预格式化文本",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "pre.html"
+				}
+			}
+		},
+		"table" : {
+			"title" : "表格元素",
+			"tags" : {
+				"table" : {
+					"def" : "定义表格",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "table.html",
+					"att" : {
+						"border" : {
+							"title" : ["表格边框"],
+							"1" : "",
+							"3" : "",
+							"5" : ""
+						}
+					}
+				},
+				"caption" : {
+					"def" : "定义表格标题",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "table.html"
+				},
+				"colgroup" : {
+					"def" : "定义表格列的分组",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "table.html"
+				},
+				"col" : {
+					"def" : "定义表格列的属性",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "table.html"
+				},
+				"thead" : {
+					"def" : "定义表头",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "table.html"
+				},
+				"tbody" : {
+					"def" : "定义表格的主体",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "table.html"
+				},
+				"tfoot" : {
+					"def" : "定义表格的页脚（脚注）",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "table.html"
+				},
+				"th" : {
+					"def" : "定义表格内的表头单元格，呈现粗体、居中",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "table.html"
+				},
+				"tr" : {
+					"def" : "定义表格中的行",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "table.html"
+				},
+				"td" : {
+					"def" : "定义表格中的一个单元格",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "td.html",
+					"att" : {
+						"colspan" : {
+							"title" : ["跨列"],
+							"2" : ""
+						},
+						"rowspan" : {
+							"title" : ["跨行"],
+							"2" : ""
+						}
+					}
+				}
+			}
+		},
+		"form" : {
+			"title" : "表单元素",
+			"tags" : {
+				"form" : {
+					"def" : "创建供用户输入的表单",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "form.html",
+					"att" : {
+						"name" : {
+							"title" : ["表单名称","设置唯一标识这个表单的名称，只有设置表单名称，才可以使用脚本语言(如javascript或vbscript)引用或控制这个表单"],
+							"myForm" : ["自定义 name 名称"]
+						},
+						"action" : {
+							"title" : ["动作","设置处理表单数据的方式，可以指定处理这个表单的动态页或脚本路径，也可以设置表单数据将会发送到的E-mail地址"],
+							"http://www.baudu.com" : ["表单提交路径或方法"]
+						},
+						"method" : {
+							"title" : ["方法","设置将表单内的数据发送到服务器所使用的方法"],
+							" " : ["默认,使用浏览器的默认设置将表单数据发送到服务器，通常情况下，浏览器的默认设置为GET"],
+							"GET" : ["将值附加到请求这个页的URL中，发送附加在URL上的信息，但由于它对发送的数量作了限制，URL的长度被限制在8192个字符以内，所以不推荐使用此方法"],
+							"POST" : ["在HTTP请求中嵌入表彰数据，此种方法在发送数据的数据量上没有强加限制，也是现在普遍使用的方法"]
+						},
+						"enctype" : {
+							"title" : ["规定在发送表单数据之前如何对其进行编码","MIME类型","设置将表单内的数据发送到服务器所使用的方法"],
+							"applicaion/x-www-form-urlencoded" : ["默认，大多数情况都使用此类型"],
+							"multipart/form-data" : ["用于上传文件或图片等","如果在这个表单内添加了文件域，则表单的MiME类型会自动设为multipart/form-data"],
+							"text/plain" : ""
+						},
+						"autocomplete" : {
+							"title" : ["规定是否启用表单的自动完成功能"],
+							"on" : ["启用"],
+							"off" : ["关闭"]
+						},
+						"novalidate" : {"novalidate" : ["如果使用该属性，则提交表单时不进行默认验证"]},
+						"target" :{
+							"title" : ["规定在何处打开 action URL"],
+							"_blank" : "",
+							"_self" : "",
+							"_parent" : "",
+							"_top" : "",
+							"framename" : ""
+						},
+						"accept" : {
+							"title" : ["规定通过文件上传来提交的文件的类型"],
+							"text/plain" : ["mime_type"]
+						}
+					}
+				},
+				"fieldset" : {
+					"def" : "可将表单内的相关元素分组",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "fieldset.html",
+					"att" : {
+						"name" : {"fieldset" : ["规定 fieldset 的名称"]},
+						"form" : {"form_id" : ["规定 fieldset 所属的一个或多个表单"]},
+						"disabled" : {"disabled" : ["规定应该禁用 fieldset"]}
+					}
+				},
+				"legend" : {
+					"def" : "定义 fieldset 中的标题",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "fieldset.html"
+				},
+				"label" : {
+					"def" : "定义表单控件的标注",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "label.html",
+					"att" : {
+						"for" : {"idName" : ["规定 label 绑定到哪个表单元素"]},
+						"form" : {"form_id" : ["规定 fieldset 所属的一个或多个表单"]}
+					}
+				},
+				"input" : {
+					"def" : "定义用户可输入数据的输入字段",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "input.html",
+					"att" :{
+						"type" : {
+							"title" : ["定义输入类型"],
+							"text" : ["文本框"],
+							"password" : ["密码框"],
+							"number" : ["数字输入法"],
+							"tel" : ["电话号码输入框，只能是数字"],
+							"radio" : ["单选框"],
+							"checkbox" : ["复选框"],
+							"file" : ["文件上传选择框"],
+							"submit" : ["提交按钮"],
+							"reset" : ["重置按钮"],
+							"button" : ["一般按钮"],
+							"image" : ["图片按钮"],
+							"hidden" : ["隐藏域"]
+						},
+						"value" : {
+							"title" : ["规定 input 元素的值"],
+							"元素值显示处" : ["自定义值"]
+						},
+						"placeholder" : {
+							"title" : ["规定描述文本区域预期值的简短提示"],
+							"请输入您要输入的内容" : ["自定义值"]
+						},
+						"name" : {
+							"title" : ["定义 input 元素的名称"],
+							"myName" : ["自定义值"]
+						},
+						"disabled" : {
+							"title" : ["当 input 元素加载时禁用此元素"],
+							"disabled" : "可以只有属性，无属性值"
+						},
+						"checked" : {
+							"title" : ["规定此 input 元素首次加载时应当被选中"],
+							"checked" : ["可以只有属性，无属性值"]
+						},
+						"accept" : {
+							"title" : ["规定通过文件上传来提交的文件的类型"],
+							"text/plain" : ["mime_type"]
+						},
+						"alt" : {
+							"title" : ["定义图像输入的替代文本"],
+							"图像输入的替代文本" : ["mime_type"]
+						},
+						"autocomplete" : {
+							"title" : ["规定是否启用表单的自动完成功能"],
+							"on" : ["启用"],
+							"off" : ["关闭"]
+						},
+						"autofocus" : {
+							"title" : ["规定在页面加载后文本区域自动获得焦点","不适用于 type='hidden'"],
+							"autofocus" : ""
+						},
+						"form" : {
+							"title" : ["规定输入字段所属的一个或多个表单"],
+							"formname" : ["指向表单的 name"]
+						},
+						"formaction" : {
+							"title" : ["覆盖表单的 action 属性","适用于 type='submit' 和 type='image'"],
+							"mime_type" : ""
+						},
+						"formenctype" : {
+							"title" : ["覆盖表单的 enctype 属性","适用于 type='submit' 和 type='image'"],
+							"url" : ""
+						},
+						"formmethod" : {
+							"title" : ["覆盖表单的  method 属性","适用于 type='submit' 和 type='image'"],
+							"post" : "",
+							"get" : ""
+						},
+						"formnovalidate" : {
+							"title" : ["覆盖表单的 novalidate 属性","如果使用该属性，则提交表单时不进行验证"],
+							"formnovalidate" : ""
+						},
+						"formtarget" : {
+							"title" : ["覆盖表单的 target 属性","适用于 type='submit' 和 type='image'"],
+							"_blank" : "",
+							"_self" : "",
+							"_parent" : "",
+							"_top" : "",
+							"framename" : ""
+						},
+						"width" : {
+							"title" : ["定义 input 字段的宽度","适用于 type='image'"],
+							"100px" : "",
+							"50%" : ""
+						},
+						"height" : {
+							"title" : ["定义 input 字段的高度","适用于 type='image'"],
+							"100px" : "",
+							"50%" : ""
+						},
+						"list" : {
+							"title" : ["引用包含输入字段的预定义选项的 datalist"],
+							"datalist-id" : ""
+						},
+						"max" : {
+							"title" : ["规定输入字段的最大值","请与 'min' 属性配合使用，来创建合法值的范围"],
+							"18" : "",
+							"2017-05-06" : ""
+						},
+						"min" : {
+							"title" : ["规定输入字段的最小值","请与 'max' 属性配合使用，来创建合法值的范围"],
+							"6" : "",
+							"2016-05-06" : ""
+						},
+						"maxlength" : {
+							"title" : ["规定输入字段中的字符的最大长度"],
+							"6" : ""
+						},
+						"multiple" : {
+							"title" : ["如果使用该属性，则允许一个以上的值"],
+							"multiple" : ""
+						},
+						"pattern" : {
+							"title" : ["规定输入字段的值的模式或格式"],
+							"pattern='[0-9]'" : ""
+						},
+						"readonly" : {
+							"title" : ["规定输入字段为只读"],
+							"readonly" : ""
+						},
+						"required" : {
+							"title" : ["指示输入字段的值是必需的"],
+							"required" : ""
+						},
+						"size" : {
+							"title" : ["定义输入字段的宽度"],
+							"100" : ""
+						},
+						"src" : {
+							"title" : ["定义以提交按钮形式显示的图像的 URL"],
+							"case/images/01.png" : ""
+						},
+						"step" : {
+							"title" : ["规定输入字的的合法数字间隔"],
+							"2" : "",
+							"3" : ""
+						},
+						"src" : {
+							"title" : ["定义以提交按钮形式显示的图像的 URL"],
+							"case/images/01.png" : ""
+						}
+					}
+				},
+				"button" : {
+					"def" : "定义按钮",
+					"ins" : [],
+					"is5" : 0,
+					"att" : {
+						"autofocus" : {
+							"title" : ["规定当页面加载时按钮应当自动地获得焦点"],
+							"autofocus" : ""
+						},
+						"disabled" : {
+							"title" : ["规定应该禁用该按钮"],
+							"disabled" : ""
+						},
+						"form" : {
+							"title" : ["规定输入字段所属的一个或多个表单"],
+							"formname" : ["指向表单的 name"]
+						},
+						"formaction" : {
+							"title" : ["覆盖表单的 action 属性","适用于 type='submit' 和 type='image'"],
+							"mime_type" : ""
+						},
+						"formenctype" : {
+							"title" : ["覆盖表单的 enctype 属性","适用于 type='submit' 和 type='image'"],
+							"url" : ""
+						},
+						"formmethod" : {
+							"title" : ["覆盖表单的  method 属性","适用于 type='submit' 和 type='image'"],
+							"post" : "",
+							"get" : ""
+						},
+						"formnovalidate" : {
+							"title" : ["覆盖表单的 novalidate 属性","如果使用该属性，则提交表单时不进行验证"],
+							"formnovalidate" : ""
+						},
+						"formtarget" : {
+							"title" : ["覆盖表单的 target 属性","适用于 type='submit' 和 type='image'"],
+							"_blank" : "",
+							"_self" : "",
+							"_parent" : "",
+							"_top" : "",
+							"framename" : ""
+						},
+						"name" : {
+							"title" : ["规定按钮的名称"],
+							"myName" : ["自定义值"]
+						},
+						"type" : {
+							"title" : ["规定按钮的类型"],
+							"submit" : ["提交按钮"],
+							"reset" : ["重置按钮"],
+							"button" : ["一般按钮"]
+						},
+						"value" : {
+							"title" : ["规定按钮的初始值。可由脚本进行修改"],
+							"按钮" : ["自定义值"]
+						}
+					}
+				},
+				"select" : {
+					"def" : "定义可选列表",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "select.html",
+					"att" : {
+						"name" : {
+							"title" : ["规定下拉列表的名称"],
+							"myName" : ["自定义值"]
+						},
+						"multiple" : {
+							"title" : ["如果使用该属性，则允许一个以上的值"],
+							"multiple" : ""
+						},
+						"autofocus" : {
+							"title" : ["规定在页面加载后文本区域自动获得焦点"],
+							"autofocus" : ""
+						},
+						"form" : {
+							"title" : ["规定文本区域所属的一个或多个表单"],
+							"formname" : ["指向表单的 name"]
+						},
+						"required" : {
+							"title" : ["规定文本区域是必填的"],
+							"required" : ""
+						},
+						"size" : {
+							"3" : "",
+							"5" : ["规定下拉列表中可见选项的数目"]
+						},
+						"disabled" : {
+							"title" : ["禁用"],
+							"disabled" : ""
+						}
+					}
+				},
+				"optgroup" : {
+					"def" : "定义选项组",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "optgroup.html",
+					"att" : {
+						"label" : {
+							"title" : ["为选项组规定描述"],
+							"分组名称1" : ["自定义值"],
+							"分组名称2" : ["自定义值"]
+						},
+						"disabled" : {
+							"title" : ["禁用"],
+							"disabled" : ""
+						}
+					}
+				},
+				"option" : {
+					"def" : "定义下拉列表中的选项",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "option.html",
+					"att" : {
+						"disabled" : {
+							"title" : ["禁用"],
+							"disabled" : ""
+						},
+						"label" : {
+							"title" : ["定义当使用 &lt;optgroup&gt; 时所使用的标注"],
+							"分组名称1" : ["自定义值"],
+							"分组名称2" : ["自定义值"]
+						},
+						"selected" : {
+							"title" : ["规定选项（在首次显示在列表中时）表现为选中状态"],
+							"selected" : ""
+						},
+						"value" : {
+							"title" : ["定义送往服务器的选项值"],
+							"四川" : ["自定义值"]
+						}
+					}
+				},
+				"textarea" : {
+					"def" : "定义多行的文本输入控件",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "textarea.html",
+					"att" : {
+						"autofocus" : {
+							"title" : ["规定在页面加载后文本区域自动获得焦点"],
+							"autofocus" : ""
+						},
+						"disabled" : {
+							"title" : ["禁用"],
+							"disabled" : ""
+						},
+						"cols" : {
+							"title" : ["规定文本区内的可见宽度"],
+							"20" : "",
+							"30" : ""
+						},
+						"rows" : {
+							"title" : ["规定文本区内的可见行数"],
+							"2" : "",
+							"5" : ""
+						},
+						"name" : {
+							"title" : ["规定文本区的名称"],
+							"myName" : ["自定义值"]
+						},
+						"placeholder" : {
+							"title" : ["规定描述文本区域预期值的简短提示"],
+							"请输入您要输入的内容" : "自定义值"
+						},
+						"readonly" : {
+							"title" : ["规定输入字段为只读"],
+							"readonly" : ""
+						},
+						"required" : {
+							"title" : ["规定文本区域是必填的"],
+							"required" : ""
+						},
+						"wrap" : {
+							"title" : ["规定当在表单中提交时，文本区域中的文本如何换行"],
+							"hard" : "",
+							"soft" : ""
+						}
+					}
+				},
+				"datalist" : {
+					"def" : "定义可选数据的列表，与 input 配合使用，可制作出输入值的下拉列表",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "datalist.html"
+				},
+				"keygen" : {
+					"def" : "定义生成密钥",
+					"ins" : ["规定用于表单的密钥对生成器字段","当提交表单时，私钥存储在本地，公钥发送到服务器"],
+					"is5" : 1,
+					"cas" : "keygen.html",
+					"att" : {
+						"autofocus" : {
+							"title" : ["使 keygen 字段在页面加载时获得焦点"],
+							"autofocus" : ""
+						},
+						"disabled" : {
+							"title" : ["禁用 keytag 字段"],
+							"disabled" : ""
+						},
+						"form" : {
+							"title" : ["定义该 keygen 字段所属的一个或多个表单"],
+							"formname" : ["指向表单的 name"]
+						},
+						"name" : {
+							"title" : ["定义 keygen 元素的唯一名称","name 属性用于在提交表单时搜集字段的值"],
+							"myName" : ["自定义值"]
+						},
+						"challenge" : {
+							"title" : ["如果使用，则将 keygen 的值设置为在提交时询问"],
+							"challenge" : ""
+						},
+						"keytype" : {
+							"title" : ["定义 keytype"],
+							"rsa" : ["rsa 生成 RSA 密钥"]
+						}
+					}
+				},
+				"output" : {
+					"def" : "定义不同类型的输出，比如脚本的输出",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "output.html",
+					"att" : {
+						"for" : {
+							"title" : ["定义输出域相关的一个或多个元素"],
+							"id" : "",
+							"id1 id2" : ["自定义 id"]
+						},
+						"form" : {
+							"title" : ["定义输入字段所属的一个或多个表单"],
+							"formname" : ["指向表单的 name"]
+						},
+						"name" : {
+							"title" : ["定义对象的唯一名称。（表单提交时使用）"],
+							"myName" : ["自定义值"]
+						}
+					}
+				},
+				"meter" : {
+					"def" : "定义已知范围或分数值内的标量测量。也被称为 gauge（尺度）",
+					"ins" : ["用于磁盘用量、查询结果的相关性，等等"],
+					"is5" : 1,
+					"cas" : "meter.html",
+					"att" : {
+						"form" : {
+							"title" : ["规定 &lt;meter&gt; 元素所属的一个或多个表单"],
+							"formname" : ["指向表单的 name"]
+						},
+						"high" : {
+							"title" : ["规定被视作高的值的范围","value 在高值以上，会显示警告黄色"],
+							"60" : "",
+							"80" : ""
+						},
+						"low" : {
+							"title" : ["规定被视作低的值的范围","value 在低值以下，会显示警告黄色"],
+							"20" : "",
+							"40" : ""
+						},
+						"max" : {
+							"title" : ["规定范围的最大值"],
+							"1" : ["默认"],
+							"10" : "",
+							"100" : ""
+						},
+						"min" : {
+							"title" : ["规定范围的最小值"],
+							"0" : ["默认"]
+						},
+						"optimum" : {
+							"title" : ["规定度量的优化值","规定测量范围的最佳值，浮点数","指定最适值"],
+							"10" : "",
+							"30" : "",
+							"60" : "",
+							"80" : ""
+						},
+						"value" : {
+							"title" : ["必需。规定度量的当前值"],
+							"0.5" : "",
+							"5" : "",
+							"30" : "",
+							"50" : "",
+							"90" : ""
+						}
+					}
+				},
+				"progress" : {
+					"def" : "标示任务的进度（进程）",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "progress.html",
+					"att" : {
+						"max" : {
+							"title" : ["规定任务一共需要多少工作"],
+							"1" : "",
+							"10" : "",
+							"100" : ""
+						},
+						"value" : {
+							"title" : ["规定已经完成多少任务"],
+							"0.5" : "",
+							"5" : "",
+							"50" : ""
+						}
+					}
+				}
+			}
+		},
+		"text" : {
+			"title" : "文本层次定义元素",
+			"tags" : {
+				"a" : {
+					"def" : "定义超链接",
+					"ins" : [],
+					"is5" : 0,
+					"att" : {
+						"href" : {
+							"title" : ["定义超链接地址"],
+							"http://www.wa.ebangon.com" : ["互联网地址"],
+							"index.html#/css" : ["本地地址"],
+							"#name" : ["锚地址"]
+						},
+						"title" : {
+							"title" : ["定义提示"],
+							"this is a title" : ""
+						},
+						"target" : {
+							"title" : ["定义网页打开的目标方式"],
+							"_blank" : ["浏览器总在一个新打开、未命名的窗口中载入目标文档"],
+							"_self" : ["这个目标的值对所有没有指定目标的 &lt;a&gt; 标签是默认目标，它使得目标文档载入并显示在相同的框架或者窗口中作为源文档。这个目标是多余且不必要的，除非和文档标题 &lt;base&gt; 标签中的 target 属性一起使用"],
+							"_parent" : ["这个目标使得文档载入父窗口或者包含来超链接引用的框架的框架集。如果这个引用是在窗口或者在顶级框架中，那么它与目标 _self 等效"],
+							"_top" : ["这个目标使得文档载入包含这个超链接的窗口，用 _top 目标将会清除所有被包含的框架并将文档载入整个浏览器窗口"]
+						}
+					}
+				},
+				"span" : {
+					"def" : "用于对文档中的行内元素进行组合",
+					"ins" : ["请使用 span 元素对行内元素进行分组，以便通过样式对它们进行格式化"],
+					"is5" : 0
+				},
+				"b" : {
+					"def" : "定义粗体文本",
+					"ins" : [],
+					"is5" : 0
+				},
+				"i" : {
+					"def" : "定义斜体文本",
+					"ins" : [],
+					"is5" : 0
+				},
+				"small" : {
+					"def" : "将旁注 (side comments) 呈现为小型文本",
+					"ins" : [],
+					"is5" : 0
+				},
+				"q" : {
+					"def" : "定义短引用",
+					"ins" : [],
+					"is5" : 0
+				},
+				"sup" : {
+					"def" : "定义上标文本",
+					"ins" : [],
+					"is5" : 0
+				},
+				"sub" : {
+					"def" : "定义下标文本",
+					"ins" : [],
+					"is5" : 0
+				},
+				"mark" : {
+					"def" : "定义带有记号的文本",
+					"ins" : ["请在需要突出显示文本时使用 &lt;m&gt; 标签"],
+					"is5" : 1
+				},
+				"m" : {
+					"def" : "定义突出显示的文本",
+					"ins" : [],
+					"is5" : 1
+				},
+				"time" : {
+					"def" : "定义日期/时间",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "time.html"
+				},
+				"abbr" : {
+					"def" : "定义缩写",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "abbr.html"
+				},
+				"bdi" : {
+					"def" : "定义文本的文本方向，使其脱离其周围文本的方向设置",
+					"ins" : [],
+					"is5" : 0,
+					"isN" : 1
+				},
+				"bdo" : {
+					"def" : "定义文本显示的方向",
+					"ins" : [],
+					"is5" : 0,
+					"isN" : 1
+				},
+				"ruby" : {
+					"def" : "定义 ruby 注释",
+					"ins" : [
+						"在东亚使用，显示的是东亚字符的发音",
+						"与 &lt;ruby&gt; 以及 &lt;rt&gt; 标签一同使用：",
+						"ruby 元素由一个或多个字符（需要一个解释/发音）和一个提供该信息的 rt 元素组成，还包括可选的 rp 元素，定义当浏览器不支持 'ruby' 元素时显示的内容"
+					],
+					"is5" : 0,
+					"isN" : 1,
+					"cas" : ""
+				},
+				"rp" : {
+					"def" : "定义若浏览器不支持 ruby 元素显示的内容",
+					"ins" : [],
+					"isN" : 1,
+					"is5" : 0
+				},
+				"rt" : {
+					"def" : "定义 ruby 注释的解释（中文注音或字符）",
+					"ins" : [],
+					"isN" : 1,
+					"is5" : 0
+				}
+			}
+		},
+		"short" : {
+			"title" : "短语元素",
+			"promt" : ["不反对使用，但是通过使用样式表，可能取得更丰富的效果"],
+			"tags" : {
+				"em" : {
+					"def" : "呈现为被强调的文本",
+					"ins" : [],
+					"is5" : 0
+				},
+				"strong" : {
+					"def" : "定义重要的文本",
+					"ins" : [],
+					"is5" : 0
+				},
+				"s" : {
+					"def" : "删除文本",
+					"ins" : [],
+					"is5" : 0,
+					"isN" : 1
+				},
+				"strike" : {
+					"def" : "删除文本",
+					"ins" : [],
+					"is5" : 0,
+					"isN" : 1
+				},
+				"dfn" : {
+					"def" : "定义一个项目",
+					"ins" : [],
+					"is5" : 0,
+					"isN" : 1
+				},
+				"code" : {
+					"def" : "定义计算机代码文本",
+					"ins" : [],
+					"is5" : 0,
+					"isN" : 1
+				},
+				"samp" : {
+					"def" : "定义样本文本",
+					"ins" : [],
+					"is5" : 0,
+					"isN" : 1
+				},
+				"kdb" : {
+					"def" : "定义键盘键入的文本",
+					"ins" : [],
+					"is5" : 0,
+					"isN" : 1
+				},
+				"var" : {
+					"def" : "定义变量",
+					"ins" : [],
+					"is5" : 0,
+					"isN" : 1
+				},
+				"cite" : {
+					"def" : "定义引用",
+					"ins" : [],
+					"is5" : 0,
+					"isN" : 1
+				}
+			}
+		},
+		"editor" : {
+			"title" : "编辑元素",
+			"tags" : {
+				"ins" : {
+					"def" : "定义插入文本",
+					"ins" : [],
+					"is5" : 0
+				},
+				"del" : {
+					"def" : "定义删除文本",
+					"ins" : [],
+					"is5" : 0
+				},
+				"u" : {
+					"def" : "定义插入文本",
+					"ins" : [],
+					"is5" : 0,
+					"isN" : 1
+				}
+			}
+		},
+		"insert" : {
+			"title" : "嵌入内容元素",
+			"tags" : {
+				"img" : {
+					"def" : "添加图片",
+					"ins" : [],
+					"cas" : "img.html",
+					"att" : {
+						"src" : {
+							"title" : ["规定图片的 URL"],
+							"case/images/test.png" : "",
+							"case/images/logo.png" : ""
+						},
+						"alt" : {
+							"title" : ["图片不显示时的提示"],
+							"图片不显示时的提示" : ""
+						},
+						"title" : {
+							"title" : ["图片不显示时的提示","鼠标移上去的提示"],
+							"图片不显示时的提示" : "",
+							"鼠标移上去的提示" : ""
+						},
+						"width" : {
+							"title" : ["设置图片宽度"],
+							"200px" : "",
+							"300px" : ""
+						},
+						"height" : {
+							"title" : ["设置图片高度"],
+							"200px" : "",
+							"300px" : ""
+						}
+					}
+				},
+				"audio" : {
+					"def" : "定义声音，比如音乐或其他音频流",
+					"ins" : ["可以在开始标签和结束标签之间放置文本内容，这样老的浏览器就可以显示出不支持该标签的信息"],
+					"is5" : 1,
+					"cas" : "audio.html",
+					"att" : {
+						"src" : {
+							"title" : ["要播放的音频的 URL"],
+							"case/images/audio.mp3" : ""
+						},
+						"autoplay" : {
+							"title" : ["音频在就绪后马上播放"],
+							"autoplay" : ""
+						},
+						"controls" : {
+							"title" : ["向用户显示控件，比如播放按钮"],
+							"controls" : ""
+						},
+						"loop" : {
+							"title" : ["每当音频结束时重新开始播放"],
+							"loop" : ""
+						},
+						"muted" : {
+							"title" : ["静音"],
+							"muted" : ""
+						},
+						"preload" : {
+							"title" : ["音频在页面加载时进行加载，并预备播放","如果使用 'autoplay'，则忽略该属性"],
+							"preload" : ""
+						}
+					}
+				},
+				"video" : {
+					"def" : "标签定义视频，比如电影片段或其他视频流",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "video.html",
+					"att" : {
+						"src" : {
+							"title" : ["要播放的音频的 URL"],
+							"case/images/video.ogg" : ""
+						},
+						"autoplay" : {
+							"title" : ["音频在就绪后马上播放"],
+							"autoplay" : ""
+						},
+						"controls" : {
+							"title" : ["向用户显示控件，比如播放按钮"],
+							"controls" : ""
+						},
+						"loop" : {
+							"title" : ["则当媒介文件完成播放后再次开始播放"],
+							"loop" : ""
+						},
+						"muted" : {
+							"title" : ["静音"],
+							"muted" : ""
+						},
+						"preload" : {
+							"title" : ["音频在页面加载时进行加载，并预备播放","如果使用 'autoplay'，则忽略该属性"],
+							"preload" : ""
+						},
+						"width" : {
+							"title" : ["设置视频播放器的宽度"],
+							"500px" : ""
+						},
+						"height" : {
+							"title" : ["设置视频播放器的高度"],
+							"300px" : ""
+						},
+						"poster" : {
+							"title" : ["规定视频下载时显示的图像，或者在用户点击播放按钮前显示的图像"],
+							"case/images/logo.png" : ""
+						}
+					}
+				},
+				"source" : {
+					"def" : "为媒介元素（比如 <video> 和 <audio>）定义媒介资源",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "video.html",
+					"att" : {
+						"src" : {
+							"title" : ["规定媒体文件的 URL"],
+							"case/images/audio.mp3" : ""
+						},
+						"type" : {
+							"title" : ["规定媒体资源的 MIME 类型"],
+							"audio/ogg" : "",
+							"audio/mpeg" : "",
+							"audio/mp3" : ""
+						},
+						"media" : {
+							"title" : ["规定媒体资源的类型"],
+							"media query" : ""
+						}
+					}
+				},
+				"track" : {
+					"def" : "定义用在媒体播放器中的文本轨道",
+					"ins" : [],
+					"is5" : 1,
+					"cas" : "audio.html",
+					"att" : {
+						"src" : {
+							"title" : ["轨道的 URL"],
+							"subs_chi.srt" : ""
+						},
+						"default" : {
+							"title" : ["规定该轨道是默认的，假如没有选择任何轨道"],
+							"default" : ""
+						},
+						"kind" : {
+							"title" : ["表示轨道属于什么文本类型"],
+							"captions" : "",
+							"chapters" : "",
+							"descriptions" : "",
+							"metadata" : "",
+							"subtitles" : ""
+						},
+						"label" : {
+							"title" : ["轨道的标签或标题"],
+							"label" : ""
+						},
+						"srclang" : {
+							"title" : ["轨道的语言，若 kind 属性值是 'subtitles'，则该属性必需的"],
+							"language_code" : ""
+						}
+					}
+				},
+				"canvas" : {
+					"def" : "定义图形，比如图表和其他图像",
+					"ins" : ["&lt;canvas&gt; 标签只是图形容器，您必须使用脚本来绘制图形"],
+					"is5" : 1,
+					"cas" : "canvas.html",
+					"att" : {
+						"width" : {
+							"title" : ["规设置 canvas 的高度"],
+							"500px" : ""
+						},
+						"height" : {
+							"title" : ["设置 canvas 的宽度"],
+							"300px" : ""
+						}
+					}
+				},
+				"iframe" : {
+					"def" : "定义行内的子窗口（框架）",
+					"ins" : ["创建包含另外一个文档的内联框架（即行内框架）"],
+					"is5" : 0,
+					"cas" : "iframe.html",
+					"att" : {
+						"src" : {
+							"title" : ["规定在 iframe 中显示的文档的 URL"],
+							"http://www.baidu.com" : ""
+						},
+						"name" : {
+							"title" : ["规定 iframe 的名称"],
+							"frame_name" : ""
+						},
+						"frameborder" : {
+							"title" : ["规定是否显示框架周围的边框"],
+							"1" : "",
+							"0" : ""
+						},
+						"width" : {
+							"title" : ["规定 iframe 的宽度"],
+							"320px" : "",
+							"800px" : "",
+							"100%" : ""
+						},
+						"height" : {
+							"title" : ["规定 iframe 的高度"],
+							"500px" : "",
+							"50%" : ""
+						},
+						"longdesc" : {
+							"title" : ["规定一个页面，该页面包含了有关 iframe 的较长描述"],
+							"url" : ""
+						},
+						"marginwidth" : {
+							"title" : ["定义 iframe 的左侧和右侧的边距"],
+							"20px" : ""
+						},
+						"marginheight" : {
+							"title" : ["定义 iframe 的顶部和底部的边距"],
+							"20px" : ""
+						},
+						"sandbox" : {
+							"title" : ["启用一系列对 &lt;iframe&gt; 中内容的额外限制"],
+							"allow-forms" : "",
+							"allow-same-origin" : "",
+							"allow-scripts" : "",
+							"allow-top-navigation" : ""
+						},
+						"scrolling" : {
+							"title" : ["规定是否在 iframe 中显示滚动条"],
+							"yes" : "",
+							"no" : "",
+							"auto" : ""
+						},
+						"seamless" : {
+							"title" : ["规定 iframe 看上去像是包含文档的一部分"],
+							"seamless" : ""
+						},
+						"srcdoc" : {
+							"title" : ["规定在 <iframe> 中显示的页面的 HTML 内容"],
+							"HTML_code" : ""
+						}
+					}
+				},
+				"embed" : {
+					"def" : "定义外部交互内容或插件",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "embed.html",
+					"att" : {
+						"src" : {
+							"title" : ["嵌入内容的 URL"],
+							"http://www.tudou.com/v/Wt1rRaBK8Os/&amp;resourceId=0_04_05_99/v.swf" : ""
+						},
+						"width" : {
+							"title" : ["设置嵌入内容的宽度"],
+							"100%" : ""
+						},
+						"height" : {
+							"title" : ["设置嵌入内容的高度"],
+							"300px" : ""
+						},
+						"type" : {
+							"title" : ["定义嵌入内容的类型"],
+							"application/x-shockwave-flash" : ["flah类型文件"]
+						},
+						"loop" : {
+							"title" : ["是否循环播放"],
+							"true" : "",
+							"false" : ""
+						},
+						"allowscriptaccess" : {
+							"title" : ["是否允许全屏"],
+							"true" : "",
+							"false" : ""
+						},
+						"pluginspage" : {
+							"title" : ["获取播放器"],
+							"http://www.adobe.com/go/getflashplayer" : ["flah播放器"]
+						}
+					}
+				},
+				"object" : {
+					"def" : "定义嵌入对象",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "object.html",
+					"att" : {
+						"name" : {
+							"title" : ["定义参数的名称（用在脚本中）"],
+							"unique_name" : ""
+						},
+						"align" : {
+							"title" : ["定义围绕该对象的文本对齐方式"],
+							"left" : "",
+							"right" : "",
+							"top" : "",
+							"bottom" : ""
+						},
+						"archive" : {
+							"title" : ["由空格分隔的指向档案文件的 URL 列表。这些档案文件包含了与对象相关的资源"],
+							"url" : ""
+						},
+						"border" : {
+							"title" : ["定义对象周围的边框"],
+							"5px" : ""
+						},
+						"classid" : {
+							"title" : ["定义嵌入 Windows Registry 中或某个 URL 中的类的 ID 值，此属性可用来指定浏览器中包含的对象的位置，通常是一个 Java 类"],
+							"clsid:F08DF954-8592-11D1-B16A-00C0F0283628" : ""
+						},
+						"codebase" : {
+							"title" : ["定义在何处可找到对象所需的代码，提供一个基准 URL"],
+							"url" : ""
+						},
+						"codetype" : {
+							"title" : ["通过 classid 属性所引用的代码的 MIME 类型"],
+							"MIME type" : ""
+						},
+						"data" : {
+							"title" : ["定义引用对象数据的 URL。如果有需要对象处理的数据文件,要用 data 属性来指定这些数据文件"],
+							"url" : ""
+						},
+						"declare" : {
+							"title" : ["可定义此对象仅可被声明，但不能被创建或例示，直到此对象得到应用为止"],
+							"declare" : ""
+						},
+						"form" : {
+							"title" : ["规定对象所属的一个或多个表单"],
+							"form_id" : ""
+						},
+						"width" : {
+							"title" : ["定义对象的宽度"],
+							"250px" : ""
+						},
+						"height" : {
+							"title" : ["定义对象的高度"],
+							"300px" : ""
+						},
+						"hspace" : {
+							"title" : ["定义对象周围水平方向的空白"],
+							"10px" : ""
+						},
+						"vspace" : {
+							"title" : ["定义对象的垂直方向的空白"],
+							"10px" : ""
+						},
+						"standby" : {
+							"title" : ["定义当对象正在加载时所显示的文本"],
+							"test" : ""
+						},
+						"type" : {
+							"title" : ["定义被规定在 data 属性中指定的文件中出现的数据的 MIME 类型"],
+							"MIME_type" : ""
+						},
+						"usemap" : {
+							"title" : ["规定与对象一同使用的客户端图像映射的 URL"],
+							"url" : ""
+						}
+					}
+				},
+				"param" : {
+					"def" : "为 object 对象定义参数",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "param.html",
+					"att" : {
+						"name" : {
+							"title" : ["定义参数的名称（用在脚本中）","必选属性"],
+							"movie" : ["定义了嵌入内容","file.swf | file.mp3 | file.mp4 | ..."],
+							"src" : ["定义嵌入内容","url"],
+							"base" : ["设置flash相对参考路径，可以参考&lt;base&gt;标签","url"],
+							"quality" : ["显示质量","high(默认) | low | autolow | autohigh | medium | hight | best"],
+							"wmode" : [
+								"用于设置flash窗口模式",
+								"window：默认值，始终位于html的顶层",
+								"opaque：允许flash上层可以有网页的遮挡",
+								"transparent：flash背景透明，有可能降低flash的性能"
+							],
+							"bgColor" : ["设置flash的背景色"],
+							"autoplay" : ["是否自动播放","true | false"],
+							"allowFullScreen" : ["是否允许全屏，默认不允许全屏","true | false"],
+							"themenu" : ["设置flash的右键菜单","true | false"],
+							"scale" : [
+								"设置flash缩放模式",
+								"showall：显示全部内容,保持比例，但是上下，或者左右可能有空白",
+								"noborder：缩放可以裁减内容，保持比例，但是不留空白",
+								"exactfit：缩放按照flash设置的高度和宽度，不保持比例",
+								"noscale：不缩放，原始比例"
+							],
+							"salign" : [
+								"设置flash缩放的参考点",
+								"L：左侧",
+								"R：右侧",
+								"T：上侧",
+								"B：下侧",
+								"TL：左上",
+								"TR：右上",
+								"BL：左下",
+								"BR：右下",
+								"默认以中心作为参考点"
+							],
+							"vars" : ["给flash传递参数，多个参数可以使用&符号连接"]
+						},
+						"type" : {
+							"title" : ["规定参数的 MIME 类型（internet media type）"],
+							"MIME type" : ""
+						},
+						"valuetype" : {
+							"title" : ["规定值的 MIME 类型"],
+							"data" : "",
+							"ref" : "",
+							"object" : ""
+						}
+					}
+				},
+				"map" : {
+					"def" : "定义图像映射中的区域",
+					"ins" : ["配合 &lt;area&gt; 使用"],
+					"is5" : 0,
+					"isN" : 1,
+					"cas" : "map.html",
+					"att" : {
+						"name" : {
+							"title" : ["为 image-map 规定的名称"],
+							"mapname" : ""
+						}
+					}
+				},
+				"area" : {
+					"def" : "area 元素可定义图像映射中的区域",
+					"ins" : ["area 元素永远嵌套在 map 元素内部"],
+					"is5" : 0,
+					"isN" : 1,
+					"cas" : "map.html",
+					"att" : {
+						"coords" : {
+							"title" : ["定义可点击区域（对鼠标敏感的区域）的坐标"],
+							"0,0,0,0" : ""
+						},
+						"href" : {
+							"title" : ["定义此区域的目标 URL"],
+							"http://www.wa.ebangon.com" : ["url"]
+						},
+						"nohref" : {
+							"title" : ["从图像映射排除某个区域"],
+							"nohref" : ""
+						},
+						"shape" : {
+							"title" : ["定义区域的形状"],
+							"rect" : ["x,y,w,h"],
+							"circle" : "x,y,w",
+							"poly" : ""
+						},
+						"target" : {
+							"title" : ["规定在何处打开 href 属性指定的目标 URL"],
+							"_blank" : "",
+							"_parent" : "",
+							"_self" : "",
+							"_top" : ""
+						}
+					}
+				}
+			}
+		},
+		"interact" : {
+			"title" : "互动元素",
+			"tags" : {
+				"command" : {
+					"def" : "定义命令按钮",
+					"ins" : ["目前只有 IE 支持 <command> 标签"],
+					"is5" : 1,
+					"cas" : "command.html",
+					"att" : {
+						"checked" : {
+							"title" : ["定义是否被选中。仅用于 radio 或 checkbox 类型"],
+							"checked" : ""
+						},
+						"disabled" : {
+							"title" : ["定义 command 是否可用"],
+							"disabled" : ""
+						},
+						"icon" : {
+							"title" : ["定义作为 command 来显示的图像的 url"],
+							"url" : ""
+						},
+						"label" : {
+							"title" : ["为 command 定义可见的 label"],
+							"text" : ""
+						},
+						"radiogroup" : {
+							"title" : ["定义 command 所属的组名。仅在类型为 radio 时使用"],
+							"groupname" : ""
+						},
+						"type" : {
+							"title" : ["定义该 command 的类型。默认是 'command'"],
+							"command" : "",
+							"checkbox" : "",
+							"radio" : ""
+						}
+					}
+				},
+				"details" : {
+					"def" : "用于描述文档或文档某个部分的细节",
+					"ins" : ["与 &lt;summary&gt; 标签 配合使用可以为 details 定义标题。标题是可见的，用户点击标题时，会显示出 details"],
+					"is5" : 1,
+					"cas" : "details.html",
+					"att" : {
+						"open" : {
+							"title" : ["定义 details 是否可见"],
+							"open" : ""
+						}
+					}
+				},
+				"summary" : {
+					"def" : "定义 details 元素的标题",
+					"ins" : ["details 元素用于描述有关文档或文档片段的详细信息"],
+					"is5" : 1,
+					"cas" : "details.html"
+				},
+				"menu" : {
+					"def" : "定义命令的列表或菜单",
+					"ins" : [
+						"当希望列出表单控件时，使用该标签",
+						"标签用于上下文菜单、工具栏以及用于列出表单控件和命令",
+						"目前所有主流浏览器都不支持  &lt;menu&gt; 标签"
+					],
+					"is5" : 1,
+					"cas" : "menu.html",
+					"att" : {
+						"label" : {
+							"title" : ["规定菜单的可见标签"],
+							"text": ""
+						},
+						"type" : {
+							"title" : ["规定要显示哪种菜单类型"],
+							"popup" : "",
+							"toolbar" : ""
+						}
+					}
+				}
+			}
+		},
+		"script" : {
+			"title" : "脚本元素",
+			"tags" : {
+				"script" : {
+					"def" : "定义脚本",
+					"ins" : [],
+					"is5" : 0,
+					"cas" : "script.html"
+				},
+				"noscript" : {
+					"def" : "定义 noscript 部分",
+					"ins" : [],
+					"is5" : 0,
+					"isN" : 1,
+					"cas" : "noscript.html"
+				}
+			}
+		}
+	}
+}

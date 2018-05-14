@@ -1,0 +1,14 @@
+<script type="module">
+	{
+		let str = 'abcdefg123hijk';
+		let reg = new RegExp(/123/ig);
+		
+		document.write(`匹配字符串并返回：${str.match(reg)}<br><br>`);
+		
+		document.write(`匹配字符串并替换且返回新的字符串：${str.replace(reg,'被替换掉的')}<br><br>`);
+		
+		document.write(`匹配字符串并返回位置：${str.search(reg)}<br><br>`);
+		
+		document.write(`以匹配字符串将字符串用逗号分割：${str.split(reg)}<br><br>`);
+	}
+</script>

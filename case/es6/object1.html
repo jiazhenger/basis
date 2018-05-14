@@ -1,0 +1,16 @@
+<script type="module">
+	{
+		let propKey = 'foo';
+
+		let obj = {
+			'first word': 'hello',
+			[propKey]: true,
+			['a' + 'bc']: 123,
+			['h'+'ello']() {
+    			return 'hi';
+  			}
+		}
+		
+		document.write(`属性名表达式：${JSON.stringify(obj)}<br><br>`);
+	}
+</script>
